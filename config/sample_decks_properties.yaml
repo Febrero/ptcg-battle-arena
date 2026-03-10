@@ -1,0 +1,2601 @@
+---
+- :type: A1
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: A2
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: A3
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: A4
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: A5
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: A6
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: A7
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: A8
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: A9
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: A10
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: A11
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: A12
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: A13
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: A14
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: A15
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: A16
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: A17
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: A18
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: A19
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: A20
+  :rarities:
+    :Grey: 50
+    :Common: 0
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: B1
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: B2
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: B3
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: B4
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: B5
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: B6
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: B7
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: B8
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: B9
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: B10
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: B11
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: B12
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: B13
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: B14
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: B15
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: B16
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: B17
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: B18
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: B19
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: B20
+  :rarities:
+    :Grey: 45
+    :Common: 5
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: C1
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: C2
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: C3
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: C4
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: C5
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: C6
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: C7
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: C8
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: C9
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: C10
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: C11
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: C12
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: C13
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: C14
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: C15
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: C16
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: C17
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: C18
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: C19
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: C20
+  :rarities:
+    :Grey: 40
+    :Common: 10
+    :Special: 0
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: D1
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: D2
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: D3
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: D4
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: D5
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: D6
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: D7
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: D8
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: D9
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: D10
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: D11
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: D12
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: D13
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: D14
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: D15
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: D16
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: D17
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: D18
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: D19
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: D20
+  :rarities:
+    :Grey: 20
+    :Common: 20
+    :Special: 10
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: E1
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: E2
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: E3
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: E4
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: E5
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: E6
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: E7
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: E8
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: E9
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: E10
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: E11
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: E12
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: E13
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: E14
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: E15
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: E16
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: E17
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: E18
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: E19
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: E20
+  :rarities:
+    :Grey: 10
+    :Common: 20
+    :Special: 20
+    :Epic: 0
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: F1
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: F2
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: F3
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: F4
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: F5
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: F6
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: F7
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: F8
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: F9
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: F10
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: F11
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: F12
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: F13
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: F14
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: F15
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: F16
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: F17
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: F18
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: F19
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: F20
+  :rarities:
+    :Grey: 0
+    :Common: 20
+    :Special: 20
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: G1
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: G2
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: G3
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: G4
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: G5
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: G6
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: G7
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: G8
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: G9
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: G10
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: G11
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: G12
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: G13
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: G14
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: G15
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: G16
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: G17
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: G18
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: G19
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: G20
+  :rarities:
+    :Grey: 0
+    :Common: 10
+    :Special: 30
+    :Epic: 10
+    :Legendary: 0
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: H1
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: H2
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: H3
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: H4
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: H5
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: H6
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: H7
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: H8
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: H9
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: H10
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: H11
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: H12
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: H13
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: H14
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: H15
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: H16
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: H17
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: H18
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: H19
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: H20
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 20
+    :Epic: 20
+    :Legendary: 10
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: I1
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: I2
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: I3
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: I4
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: I5
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: I6
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: I7
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: I8
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: I9
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: I10
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: I11
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: I12
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: I13
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: I14
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: I15
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: I16
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: I17
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: I18
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: I19
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: I20
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 10
+    :Epic: 20
+    :Legendary: 20
+    :Unique: 0
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0
+- :type: J1
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 5
+    :Forward: 32
+- :type: J2
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 5
+    :Forward: 26
+- :type: J3
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 5
+    :Forward: 20
+- :type: J4
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 5
+    :Forward: 17
+- :type: J5
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 5
+    :Forward: 11
+- :type: J6
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 10
+    :Midfielder: 10
+    :Forward: 25
+- :type: J7
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 15
+    :Midfielder: 10
+    :Forward: 22
+- :type: J8
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 20
+    :Midfielder: 10
+    :Forward: 16
+- :type: J9
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 25
+    :Midfielder: 10
+    :Forward: 10
+- :type: J10
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 30
+    :Midfielder: 10
+    :Forward: 7
+- :type: J11
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 10
+    :Midfielder: 15
+    :Forward: 21
+- :type: J12
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 15
+    :Midfielder: 15
+    :Forward: 15
+- :type: J13
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 20
+    :Midfielder: 15
+    :Forward: 12
+- :type: J14
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 25
+    :Midfielder: 15
+    :Forward: 6
+- :type: J15
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 30
+    :Midfielder: 15
+    :Forward: 0
+- :type: J16
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 10
+    :Midfielder: 20
+    :Forward: 17
+- :type: J17
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 15
+    :Midfielder: 20
+    :Forward: 11
+- :type: J18
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 5
+    :Defender: 20
+    :Midfielder: 20
+    :Forward: 5
+- :type: J19
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 3
+    :Defender: 25
+    :Midfielder: 20
+    :Forward: 2
+- :type: J20
+  :rarities:
+    :Grey: 0
+    :Common: 0
+    :Special: 0
+    :Epic: 20
+    :Legendary: 25
+    :Unique: 5
+  :positions:
+    :Goalkeeper: 4
+    :Defender: 30
+    :Midfielder: 16
+    :Forward: 0

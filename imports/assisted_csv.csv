@@ -1,0 +1,2 @@
+wallet_addr,week_days_that_play,day_hours_that_play,max_daily_games,todays_total_games_played,ai_mode
+"0x6c2005f258d8D1EF92D0A1E86b68e884d1808fb2","Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday","13,14,15,16,17,18,19,20",10,0,"Bex"

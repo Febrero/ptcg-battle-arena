@@ -1,0 +1,52 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: realfevr-battle-arena-apis-after-party
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: realfevr-battle-arena-apis-after-party
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command: ['bundle', 'exec', 'rake', 'after_party:run']
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+  backoffLimit: 4

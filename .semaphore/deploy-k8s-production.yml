@@ -1,0 +1,31 @@
+version: v1.0
+name: Deployment
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: Deploy
+    task:
+      env_vars:
+        - name: KUBECONFIG
+          value: /home/semaphore/.kube/k8s-realfevr-prod-kubeconfigs.yaml
+      jobs:
+        - name: DO k8s deploy
+          commands:
+            - checkout
+            - envsubst < kubernetes/deployment/production.yml | tee production_deployment.yml
+            - envsubst < kubernetes/after_party/production.yml | tee production_after_party.yml
+            - envsubst < kubernetes/mongo_indexes_creation/production.yml | tee production_mongo_indexes_creation.yml
+            - kubectl delete job realfevr-battle-arena-apis-after-party 2&> /dev/null || true
+            - kubectl delete job realfevr-battle-arena-apis-mongo-indexes-creation 2&> /dev/null || true
+            - kubectl apply -f production_deployment.yml
+            - kubectl describe deployment realfevr-battle-arena-apis
+            - kubectl create -f production_after_party.yml
+            - kubectl create -f production_mongo_indexes_creation.yml
+            - kubectl wait --for=condition=complete --timeout=1800s job/realfevr-battle-arena-apis-after-party
+            - kubectl wait --for=condition=complete --timeout=120s job/realfevr-battle-arena-apis-mongo-indexes-creation
+            - kubectl delete job/realfevr-battle-arena-apis-after-party
+            - kubectl delete job/realfevr-battle-arena-apis-mongo-indexes-creation
+      secrets:
+        - name: DO RealFevr K8S configs

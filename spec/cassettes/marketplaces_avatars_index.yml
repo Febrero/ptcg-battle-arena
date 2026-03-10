@@ -1,0 +1,209 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/avatars
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - xxx
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 2b3316ab-17a7-45b6-8267-12b16c1d99a9
+      X-Runtime:
+      - '0.062248'
+      Vary:
+      - Origin
+      Content-Length:
+      - '20262'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#<Errno::ECONNREFUSED:
+        Failed to open TCP connection to 127.0.0.1:3210 (Connection refused - connect(2)
+        for \"127.0.0.1\" port 3210)>","traces":{"Application Trace":[{"exception_object_id":69860,"id":22,"trace":"app/controllers/application_controller.rb:24:in
+        `authenticate_user!''"}],"Framework Trace":[{"exception_object_id":69860,"id":0,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `initialize''"},{"exception_object_id":69860,"id":1,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `open''"},{"exception_object_id":69860,"id":2,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `block in connect''"},{"exception_object_id":69860,"id":3,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/timeout.rb:95:in
+        `block in timeout''"},{"exception_object_id":69860,"id":4,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/timeout.rb:105:in
+        `timeout''"},{"exception_object_id":69860,"id":5,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:958:in
+        `connect''"},{"exception_object_id":69860,"id":6,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:943:in
+        `do_start''"},{"exception_object_id":69860,"id":7,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:932:in
+        `start''"},{"exception_object_id":69860,"id":8,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:1483:in
+        `request''"},{"exception_object_id":69860,"id":9,"trace":"airbrake (11.0.3)
+        lib/airbrake/rails/net_http.rb:11:in `block in request''"},{"exception_object_id":69860,"id":10,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack.rb:28:in `block in capture_timing''"},{"exception_object_id":69860,"id":11,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:29:in `span''"},{"exception_object_id":69860,"id":12,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `block in span''"},{"exception_object_id":69860,"id":13,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `tap''"},{"exception_object_id":69860,"id":14,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `span''"},{"exception_object_id":69860,"id":15,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack.rb:27:in `capture_timing''"},{"exception_object_id":69860,"id":16,"trace":"airbrake
+        (11.0.3) lib/airbrake/rails/net_http.rb:10:in `request''"},{"exception_object_id":69860,"id":17,"trace":"httparty
+        (0.18.1) lib/httparty/request.rb:145:in `perform''"},{"exception_object_id":69860,"id":18,"trace":"httparty
+        (0.18.1) lib/httparty.rb:594:in `perform_request''"},{"exception_object_id":69860,"id":19,"trace":"httparty
+        (0.18.1) lib/httparty.rb:508:in `get''"},{"exception_object_id":69860,"id":20,"trace":"httparty
+        (0.18.1) lib/httparty.rb:627:in `get''"},{"exception_object_id":69860,"id":21,"trace":"fantasy-revolution-users-auth-gem
+        (bda6e948a532) lib/auth/user.rb:53:in `validate_auth''"},{"exception_object_id":69860,"id":23,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:427:in `block in make_lambda''"},{"exception_object_id":69860,"id":24,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting''"},{"exception_object_id":69860,"id":25,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>''"},{"exception_object_id":69860,"id":26,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:199:in `block in halting''"},{"exception_object_id":69860,"id":27,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `block in invoke_before''"},{"exception_object_id":69860,"id":28,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `each''"},{"exception_object_id":69860,"id":29,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `invoke_before''"},{"exception_object_id":69860,"id":30,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:105:in `run_callbacks''"},{"exception_object_id":69860,"id":31,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"exception_object_id":69860,"id":32,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"exception_object_id":69860,"id":33,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"exception_object_id":69860,"id":34,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument''"},{"exception_object_id":69860,"id":35,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":69860,"id":36,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications.rb:203:in `instrument''"},{"exception_object_id":69860,"id":37,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action''"},{"exception_object_id":69860,"id":38,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action''"},{"exception_object_id":69860,"id":39,"trace":"mongoid
+        (7.2.2) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":69860,"id":40,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/base.rb:165:in `process''"},{"exception_object_id":69860,"id":41,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal.rb:190:in `dispatch''"},{"exception_object_id":69860,"id":42,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal.rb:254:in `dispatch''"},{"exception_object_id":69860,"id":43,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch''"},{"exception_object_id":69860,"id":44,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve''"},{"exception_object_id":69860,"id":45,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":69860,"id":46,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":69860,"id":47,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":69860,"id":48,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call''"},{"exception_object_id":69860,"id":49,"trace":"apipie-rails
+        (0.5.20) lib/apipie/static_dispatcher.rb:66:in `call''"},{"exception_object_id":69860,"id":50,"trace":"apipie-rails
+        (0.5.20) lib/apipie/extractor/recorder.rb:137:in `call''"},{"exception_object_id":69860,"id":51,"trace":"prometheus-client
+        (4.0.0) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":69860,"id":52,"trace":"rack
+        (2.2.4) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":69860,"id":53,"trace":"rack
+        (2.2.4) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":69860,"id":54,"trace":"rack
+        (2.2.4) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":69860,"id":55,"trace":"rack
+        (2.2.4) lib/rack/head.rb:12:in `call''"},{"exception_object_id":69860,"id":56,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":69860,"id":57,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"exception_object_id":69860,"id":58,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":69860,"id":59,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":69860,"id":60,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call''"},{"exception_object_id":69860,"id":61,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":69860,"id":62,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":69860,"id":63,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call''"},{"exception_object_id":69860,"id":64,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"exception_object_id":69860,"id":65,"trace":"railties
+        (6.1.6) lib/rails/rack/logger.rb:37:in `call_app''"},{"exception_object_id":69860,"id":66,"trace":"railties
+        (6.1.6) lib/rails/rack/logger.rb:28:in `call''"},{"exception_object_id":69860,"id":67,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"exception_object_id":69860,"id":68,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":69860,"id":69,"trace":"rack
+        (2.2.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":69860,"id":70,"trace":"activesupport
+        (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":69860,"id":71,"trace":"actionpack (6.1.6)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":69860,"id":72,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call''"},{"exception_object_id":69860,"id":73,"trace":"rack
+        (2.2.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":69860,"id":74,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call''"},{"exception_object_id":69860,"id":75,"trace":"rack-cors
+        (1.1.1) lib/rack/cors.rb:100:in `call''"},{"exception_object_id":69860,"id":76,"trace":"railties
+        (6.1.6) lib/rails/engine.rb:539:in `call''"},{"exception_object_id":69860,"id":77,"trace":"puma
+        (5.6.4) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":69860,"id":78,"trace":"puma
+        (5.6.4) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":69860,"id":79,"trace":"puma
+        (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":69860,"id":80,"trace":"puma
+        (5.6.4) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":69860,"id":81,"trace":"puma
+        (5.6.4) lib/puma/server.rb:441:in `process_client''"},{"exception_object_id":69860,"id":82,"trace":"puma
+        (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":69860,"id":0,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `initialize''"},{"exception_object_id":69860,"id":1,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `open''"},{"exception_object_id":69860,"id":2,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:960:in
+        `block in connect''"},{"exception_object_id":69860,"id":3,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/timeout.rb:95:in
+        `block in timeout''"},{"exception_object_id":69860,"id":4,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/timeout.rb:105:in
+        `timeout''"},{"exception_object_id":69860,"id":5,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:958:in
+        `connect''"},{"exception_object_id":69860,"id":6,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:943:in
+        `do_start''"},{"exception_object_id":69860,"id":7,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:932:in
+        `start''"},{"exception_object_id":69860,"id":8,"trace":"/Users/pedrolopes/.rbenv/versions/2.7.2/lib/ruby/2.7.0/net/http.rb:1483:in
+        `request''"},{"exception_object_id":69860,"id":9,"trace":"airbrake (11.0.3)
+        lib/airbrake/rails/net_http.rb:11:in `block in request''"},{"exception_object_id":69860,"id":10,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack.rb:28:in `block in capture_timing''"},{"exception_object_id":69860,"id":11,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:29:in `span''"},{"exception_object_id":69860,"id":12,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `block in span''"},{"exception_object_id":69860,"id":13,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `tap''"},{"exception_object_id":69860,"id":14,"trace":"airbrake-ruby
+        (5.2.0) lib/airbrake-ruby/timed_trace.rb:18:in `span''"},{"exception_object_id":69860,"id":15,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack.rb:27:in `capture_timing''"},{"exception_object_id":69860,"id":16,"trace":"airbrake
+        (11.0.3) lib/airbrake/rails/net_http.rb:10:in `request''"},{"exception_object_id":69860,"id":17,"trace":"httparty
+        (0.18.1) lib/httparty/request.rb:145:in `perform''"},{"exception_object_id":69860,"id":18,"trace":"httparty
+        (0.18.1) lib/httparty.rb:594:in `perform_request''"},{"exception_object_id":69860,"id":19,"trace":"httparty
+        (0.18.1) lib/httparty.rb:508:in `get''"},{"exception_object_id":69860,"id":20,"trace":"httparty
+        (0.18.1) lib/httparty.rb:627:in `get''"},{"exception_object_id":69860,"id":21,"trace":"fantasy-revolution-users-auth-gem
+        (bda6e948a532) lib/auth/user.rb:53:in `validate_auth''"},{"exception_object_id":69860,"id":22,"trace":"app/controllers/application_controller.rb:24:in
+        `authenticate_user!''"},{"exception_object_id":69860,"id":23,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:427:in `block in make_lambda''"},{"exception_object_id":69860,"id":24,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting''"},{"exception_object_id":69860,"id":25,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>''"},{"exception_object_id":69860,"id":26,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:199:in `block in halting''"},{"exception_object_id":69860,"id":27,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `block in invoke_before''"},{"exception_object_id":69860,"id":28,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `each''"},{"exception_object_id":69860,"id":29,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:512:in `invoke_before''"},{"exception_object_id":69860,"id":30,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:105:in `run_callbacks''"},{"exception_object_id":69860,"id":31,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"exception_object_id":69860,"id":32,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"exception_object_id":69860,"id":33,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"exception_object_id":69860,"id":34,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument''"},{"exception_object_id":69860,"id":35,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":69860,"id":36,"trace":"activesupport
+        (6.1.6) lib/active_support/notifications.rb:203:in `instrument''"},{"exception_object_id":69860,"id":37,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action''"},{"exception_object_id":69860,"id":38,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action''"},{"exception_object_id":69860,"id":39,"trace":"mongoid
+        (7.2.2) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":69860,"id":40,"trace":"actionpack
+        (6.1.6) lib/abstract_controller/base.rb:165:in `process''"},{"exception_object_id":69860,"id":41,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal.rb:190:in `dispatch''"},{"exception_object_id":69860,"id":42,"trace":"actionpack
+        (6.1.6) lib/action_controller/metal.rb:254:in `dispatch''"},{"exception_object_id":69860,"id":43,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch''"},{"exception_object_id":69860,"id":44,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve''"},{"exception_object_id":69860,"id":45,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":69860,"id":46,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":69860,"id":47,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":69860,"id":48,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call''"},{"exception_object_id":69860,"id":49,"trace":"apipie-rails
+        (0.5.20) lib/apipie/static_dispatcher.rb:66:in `call''"},{"exception_object_id":69860,"id":50,"trace":"apipie-rails
+        (0.5.20) lib/apipie/extractor/recorder.rb:137:in `call''"},{"exception_object_id":69860,"id":51,"trace":"prometheus-client
+        (4.0.0) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":69860,"id":52,"trace":"rack
+        (2.2.4) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":69860,"id":53,"trace":"rack
+        (2.2.4) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":69860,"id":54,"trace":"rack
+        (2.2.4) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":69860,"id":55,"trace":"rack
+        (2.2.4) lib/rack/head.rb:12:in `call''"},{"exception_object_id":69860,"id":56,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":69860,"id":57,"trace":"activesupport
+        (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"exception_object_id":69860,"id":58,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":69860,"id":59,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":69860,"id":60,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call''"},{"exception_object_id":69860,"id":61,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":69860,"id":62,"trace":"airbrake
+        (11.0.3) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":69860,"id":63,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call''"},{"exception_object_id":69860,"id":64,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"exception_object_id":69860,"id":65,"trace":"railties
+        (6.1.6) lib/rails/rack/logger.rb:37:in `call_app''"},{"exception_object_id":69860,"id":66,"trace":"railties
+        (6.1.6) lib/rails/rack/logger.rb:28:in `call''"},{"exception_object_id":69860,"id":67,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"exception_object_id":69860,"id":68,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":69860,"id":69,"trace":"rack
+        (2.2.4) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":69860,"id":70,"trace":"activesupport
+        (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":69860,"id":71,"trace":"actionpack (6.1.6)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":69860,"id":72,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call''"},{"exception_object_id":69860,"id":73,"trace":"rack
+        (2.2.4) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":69860,"id":74,"trace":"actionpack
+        (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call''"},{"exception_object_id":69860,"id":75,"trace":"rack-cors
+        (1.1.1) lib/rack/cors.rb:100:in `call''"},{"exception_object_id":69860,"id":76,"trace":"railties
+        (6.1.6) lib/rails/engine.rb:539:in `call''"},{"exception_object_id":69860,"id":77,"trace":"puma
+        (5.6.4) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":69860,"id":78,"trace":"puma
+        (5.6.4) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":69860,"id":79,"trace":"puma
+        (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":69860,"id":80,"trace":"puma
+        (5.6.4) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":69860,"id":81,"trace":"puma
+        (5.6.4) lib/puma/server.rb:441:in `process_client''"},{"exception_object_id":69860,"id":82,"trace":"puma
+        (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 21 Sep 2022 15:06:44 GMT
+recorded_with: VCR 6.0.0

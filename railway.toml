@@ -1,0 +1,9 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "bundle exec puma -C config/puma.rb"
+healthcheckPath = "/ping"
+healthcheckTimeout = 120
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

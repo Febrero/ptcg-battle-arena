@@ -1,0 +1,208 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/packs?filter%5Buid%5D=50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      X-Realfevr-Token:
+      - '123'
+      Content-Type:
+      - application/vnd.api+json
+      Accept:
+      - application/vnd.api+json
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"fc3ff8944adc712b80f9a59444d186b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0cbdd79b-0683-4689-835f-2bfaaeae45a0
+      X-Runtime:
+      - '0.005943'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAETBWmMAA0zOQW6DQAwF0Lt4PYsZAmXMLomSS0QRMthUqISgwTSpEHev002zfJa//VdgUoLqskLPUMGHl65k5BDKmHc+YxIMWRfBgf5MYhsTtV+zkVRT3ywqM1QrLK904R2MndY92+wS8uhCji4U/urgQcMgWhNzsiP+uW/KBvno8YBoG0XY4el0Pu/ZI8VsJ4cyypGyArbN0jd5lVyhXVKSUeuJPq1LsHfyfNOU5Ptfelca/ji/ub0vo5q37RcAAP//AwD4tAo3/AAAAA==
+  recorded_at: Thu, 27 Oct 2022 17:35:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/148.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"40a906cc7b7facf645edba6b2c53a56e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 06a0d517-0cbd-4cd1-8a94-54921a6daacf
+      X-Runtime:
+      - '0.002699'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"60ef7e3911784f02daeb714b","uid":148,"wallet_addr":"0xab7b9dc09b991505139eeffad09a823eb78eca25","video_id":23,"position":"Forward"}'
+  recorded_at: Thu, 27 Oct 2022 17:35:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/149.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"8f6bd23c6bc28ef818f7909fb2a2ea2b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 99f439ff-51d8-4946-91a3-959bb2b62757
+      X-Runtime:
+      - '0.003251'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"60ef7e3911784f02daeb715c","uid":149,"wallet_addr":"0xab7b9dc09b991505139eeffad09a823eb78eca25","video_id":4,"position":"Forward"}'
+  recorded_at: Thu, 27 Oct 2022 17:35:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/150.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"baa2045af430084c3b582e23fbc05797"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 549dbeaf-ff8f-4fc0-9460-f2afdfd6a575
+      X-Runtime:
+      - '0.002841'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"60ef7e3911784f02daeb716d","uid":150,"wallet_addr":"0xB7f4431C11EDD24c5e99C6c24418BF7E22C1be8b","video_id":36,"position":"Midfielder"}'
+  recorded_at: Thu, 27 Oct 2022 17:35:00 GMT
+recorded_with: VCR 6.0.0

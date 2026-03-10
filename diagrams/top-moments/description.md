@@ -1,0 +1,3 @@
+## Text to generate diagram in https://www.eraser.io/diagramgpt
+
+i receive an event in a project battle_arena_api in rabbitmq consumer from this event is consumed and processed, on step of this process is send NFT_STATS to kafka and in same project (battle_arena_api) we have a consumer of this stats and persist them in mongo, when we receive stats also invalidate the top_moments cache key that is generated to him. By another part we have an endpoint /top_moments where player can call with his bearer token and he generate top 3 moments by different lanes: goal_line_stats, defense_line_stats and attack_line_stats, in first instance we check if this top_moments has a cache key and if not we generate them. Draw me an diagram of this flow

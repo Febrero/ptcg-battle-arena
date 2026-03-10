@@ -1,0 +1,17 @@
+default: true # default: false
+parallel: true # default: false
+format: progress # default: Standard::Formatter
+ruby_version: 3.2.3 # default: RUBY_VERSION
+# default_ignores: false  # default: true
+
+ignore: # default: []
+  - "bin/**/*"
+  - "config/**/*"
+  - "db/**/*"
+  - "lib/tasks/**/*"
+  - "log/**/*"
+  - "public/**/*"
+  - "tmp/**/*"
+  - "vendor/**/*"
+  # - "spec/**/*"":
+  #   - Layout/AlignHash

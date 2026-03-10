@@ -1,0 +1,56 @@
+---
+http_interactions:
+  - request:
+      method: get
+      uri: http://localhost:3004/profile?filter%5Bwallet_addr%5D=0x20b2fc867D736F45D58B9991a52B874F4181c4Ee,0xc1bFa2B8950c00BD0a5a5eC1fb512e15c31ED63b
+      body:
+        encoding: US-ASCII
+        string: ""
+      headers:
+        X-Realfevr-I-Token:
+          - user-profile-dummy-key
+        Accept-Encoding:
+          - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+        Accept:
+          - "*/*"
+        User-Agent:
+          - Ruby
+    response:
+      status:
+        code: 200
+        message: OK
+      headers:
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-Xss-Protection:
+          - "0"
+        X-Content-Type-Options:
+          - nosniff
+        X-Download-Options:
+          - noopen
+        X-Permitted-Cross-Domain-Policies:
+          - none
+        Referrer-Policy:
+          - strict-origin-when-cross-origin
+        Content-Type:
+          - application/json; charset=utf-8
+        Vary:
+          - Accept, Origin
+        Etag:
+          - W/"107ad9dad362bf15d2a9d1a0148f7932"
+        Cache-Control:
+          - max-age=0, private, must-revalidate
+        X-Request-Id:
+          - 3b8c0d89-3a64-44fa-85d7-98b6d4db05dc
+        X-Runtime:
+          - "0.027951"
+        Server-Timing:
+          - start_processing.action_controller;dur=0.18, render.active_model_serializers;dur=0.23,
+            process_action.action_controller;dur=22.57
+        Transfer-Encoding:
+          - chunked
+      body:
+        encoding: UTF-8
+        string: '{"data":[{"id":"61def23714e91300112b01d8","type":"profiles","attributes":{"wallet_addr":"0xc1bFa2B8950c00BD0a5a5eC1fb512e15c31ED63b","username":"pabloSouza","email":"pablo.souza@realfevr.com","email_confirmed":true,"accepted_newsletters":true,"accepted_terms_and_conditions":true,"fields_to_update":["accepted_terms_and_conditions","accepted_newsletters_at"],"roles":[],"country_code":"PT","created_at":"2022-01-12T15:22:31.792Z","provider":null,"referring_referral_code":null,"referring_referral_id":null,"referred_referral_code":null,"updated_at":"2023-04-12T15:10:32.079Z"},"relationships":{"avatar":{"data":{"id":"61dd68dde79ea90e8b4337b7","type":"avatars"}},"invited_by":{"data":null}}},{"id":"61deb68014e91300112b01d2","type":"profiles","attributes":{"wallet_addr":"0x20b2fc867D736F45D58B9991a52B874F4181c4Ee","username":"PauloPinhoBK","email":"paulo.pinho@realfevr.com","email_confirmed":true,"accepted_newsletters":true,"accepted_terms_and_conditions":true,"fields_to_update":["accepted_newsletters_at"],"roles":[],"country_code":"TL","created_at":"2022-01-12T11:07:45.354Z","provider":null,"referring_referral_code":"ekkaCy","referring_referral_id":1198472,"referred_referral_code":null,"updated_at":"2023-05-16T15:42:28.351Z"},"relationships":{"avatar":{"data":{"id":"61b8fea1b79471014df8b77c","type":"avatars"}},"invited_by":{"data":null}}}],"included":[{"id":"61dd68dde79ea90e8b4337b7","type":"avatars","attributes":{"uid":6,"url":"https://realfevr-production.s3.eu-central-1.amazonaws.com/nfts-markeplace/Avatar-6.jpg","price":0.0}},{"id":"61b8fea1b79471014df8b77c","type":"avatars","attributes":{"uid":9999,"url":"https://realfevr-production.s3.eu-central-1.amazonaws.com/nfts-markeplace/Avatar-default.jpg","price":0.0}}],"meta":{"current_page":1,"next_page":1,"prev_page":1,"total_pages":1,"total_count":2}}'
+    recorded_at: Fri, 26 May 2023 12:06:46 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,787 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: realfevr-battle-arena-apis-staging
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: realfevr-battle-arena-apis-staging
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis-staging
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - puma
+            - '-C'
+            - config/puma.rb
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 10
+            periodSeconds: 300
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-ticket-locker-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-ticket-locker-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-ticket-locker-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-ticket-locker-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::TicketLockerAndDistributionEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-ticket-factory-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-ticket-factory-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-ticket-factory-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-ticket-factory-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::TicketFactoryEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-marketplace-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-marketplace-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-v2-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-marketplace-v2-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-marketplace-v2-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-v2-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceV2EventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-v3-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-marketplace-v3-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-marketplace-v3-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-v3-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceV3EventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-opener-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-opener-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-opener-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-opener-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::OpenerEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-collection-id-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-collection-id-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-collection-id-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-collection-id-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::CollectionIdEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-bridge-erc721-base-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-bridge-erc721-base-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-bridge-erc721-base-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-bridge-erc721-base-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::Erc721BridgeBaseEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rabbitmq-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rabbitmq-consumer-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rabbitmq-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-rabbitmq-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[GameEventConsumer]
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis-jobs-staging
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis-jobs-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis-jobs-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis-jobs-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - "/bin/bash"
+                  - "-l"
+                  - "-c"
+                  - "cd /usr/src/realfevr-battle-arena-apis/; for f in tmp/pids/sidekiq*.pid; do bundle exec sidekiqctl stop $f; done"
+          command:
+            - bundle
+            - exec
+            - sidekiq
+            - '-C'
+            - config/sidekiq.yml
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rabbitmq-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rabbitmq-consumer-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rabbitmq-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-rabbitmq-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[GameEventConsumer]
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis-nfts-stats-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis-nfts-stats-consumer-staging
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis-nfts-stats-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis-nfts-stats-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::NftsStatsEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-rewards-events-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-rewards-events-consumer-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-rewards-events-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-rmq-rewards-events-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[RewardsEventsConsumer]
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-prizes-events-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-prizes-events-consumer-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-prizes-events-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-rmq-prizes-events-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[PrizesEventsConsumer]
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-marketplace-events-consumer-staging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-marketplace-events-consumer-staging
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-marketplace-events-consumer-staging
+    spec:
+      containers:
+        - name: realfevr-battle-arena-rmq-marketplace-events-consumer-staging
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[MarketplaceEventsConsumer]
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.3Gi
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre

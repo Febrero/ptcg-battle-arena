@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3004/profile?filter%5Bwallet_addr%5D=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - user-profile-dummy-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"4387c8dbd292bdd254b4785667db6142"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 63006e6d-92c8-4d6d-bcbc-2b92ed41b347
+      X-Runtime:
+      - '0.029143'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.16, render.active_model_serializers;dur=0.13,
+        process_action.action_controller;dur=23.47
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"meta":{"current_page":1,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Mon, 29 May 2023 10:25:22 GMT
+recorded_with: VCR 6.0.0

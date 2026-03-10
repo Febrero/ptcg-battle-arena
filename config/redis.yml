@@ -1,0 +1,20 @@
+development:
+  default:
+    :url: 'redis://localhost:6379/2'
+  sidekiq:
+    :url: 'redis://localhost:6379/2'
+test:
+  default:
+    :url: 'redis://localhost:6379/2'
+  sidekiq:
+    :url: 'redis://localhost:6379/2'
+staging:
+  default:
+    :url: 'redis://redis-staging:6379/2'
+  sidekiq:
+    :url: 'redis://redis-staging:6379/2'
+production:
+  default:
+    :url: <%= ENV.fetch('REDIS_URL', 'redis://localhost:6379/2') %>
+  sidekiq:
+    :url: <%= ENV.fetch('REDIS_URL', 'redis://localhost:6379/2') %>

@@ -1,0 +1,2 @@
+class TicketNotFound < StandardError
+end

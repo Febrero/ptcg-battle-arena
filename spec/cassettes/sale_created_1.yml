@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2?uid=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"62b3535fcf9ec3de9853133d5d599d35"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e8b38a1-22d1-4a5f-857c-69394cb938e0
+      X-Runtime:
+      - '0.109811'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "[1,2,3,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,34,36,37,38,39,46,47,48,49,50]"
+  recorded_at: Thu, 27 Oct 2022 16:34:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=4,5,6,31,32,35,40,41,42,43,44,45&wallet_addr=0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"0266cb904d2af2354d814061bf8d6809"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f894dcad-0ef7-4af6-8ff2-a3710ba7e956
+      X-Runtime:
+      - '0.017144'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"60ef7e3911784f02daeb6a74","type":"nfts","attributes":{"uid":45,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":2,"position":"Midfielder"}},{"id":"60ef7e3911784f02daeb6a63","type":"nfts","attributes":{"uid":44,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":7,"position":"Forward"}},{"id":"60ef7e3811784f02daeb67dd","type":"nfts","attributes":{"uid":6,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":27,"position":"Midfielder"}},{"id":"60ef7e3911784f02daeb6a52","type":"nfts","attributes":{"uid":43,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":20,"position":"Midfielder"}},{"id":"60ef7e3811784f02daeb67cc","type":"nfts","attributes":{"uid":5,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":28,"position":"Defender"}},{"id":"60ef7e3811784f02daeb67bb","type":"nfts","attributes":{"uid":4,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":27,"position":"Midfielder"}},{"id":"60ef7e3811784f02daeb6997","type":"nfts","attributes":{"uid":32,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":34,"position":"Defender"}},{"id":"60ef7e3811784f02daeb6986","type":"nfts","attributes":{"uid":31,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":24,"position":"Forward"}},{"id":"60ef7e3811784f02daeb69ca","type":"nfts","attributes":{"uid":35,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":3,"position":"Defender"}},{"id":"60ef7e3911784f02daeb6a1f","type":"nfts","attributes":{"uid":40,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":35,"position":"Midfielder"}},{"id":"60ef7e3911784f02daeb6a30","type":"nfts","attributes":{"uid":41,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":18,"position":"Goalkeeper"}},{"id":"60ef7e3911784f02daeb6a41","type":"nfts","attributes":{"uid":42,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":37,"position":"Midfielder"}}],"meta":{"current_page":0,"next_page":1,"prev_page":1,"total_pages":1,"total_count":12}}'
+  recorded_at: Thu, 27 Oct 2022 16:34:15 GMT
+recorded_with: VCR 6.0.0

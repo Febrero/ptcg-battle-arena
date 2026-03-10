@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"a977622bb3290ec4574157f9f797d1b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fadb23f5-7868-4a84-a4c1-a5d2bcac2655
+      X-Runtime:
+      - '0.014408'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"6275e0bbb54c3300983bc33b","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275ddd1b54c3300983969b7","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d8230a63220350f9f9ad","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d52d0a632201f916d6ab","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d3a70a6322013c9dc11f","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"60f5d0210751f201483f3947","type":"tokens","attributes":{"name":"BNB","address":null,"price_in_dollars":282.05,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef7d1411784f02dae91295","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef659357566a009678e813","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef0e2122464b08800cde89","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0007,"update_token_price_in_sc":false,"image_url":null}}],"meta":{"current_page":1,"next_page":1,"prev_page":1,"total_pages":1,"total_count":9}}'
+  recorded_at: Thu, 02 Nov 2023 17:01:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"a977622bb3290ec4574157f9f797d1b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a198ae58-d63c-4468-ad79-cab73ce82444
+      X-Runtime:
+      - '0.012471'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"6275e0bbb54c3300983bc33b","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275ddd1b54c3300983969b7","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d8230a63220350f9f9ad","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d52d0a632201f916d6ab","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d3a70a6322013c9dc11f","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"60f5d0210751f201483f3947","type":"tokens","attributes":{"name":"BNB","address":null,"price_in_dollars":282.05,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef7d1411784f02dae91295","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef659357566a009678e813","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef0e2122464b08800cde89","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0007,"update_token_price_in_sc":false,"image_url":null}}],"meta":{"current_page":1,"next_page":1,"prev_page":1,"total_pages":1,"total_count":9}}'
+  recorded_at: Thu, 02 Nov 2023 17:01:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"a977622bb3290ec4574157f9f797d1b0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 11f37408-2ad0-4139-8f41-413c6d47c276
+      X-Runtime:
+      - '0.035848'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"6275e0bbb54c3300983bc33b","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275ddd1b54c3300983969b7","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d8230a63220350f9f9ad","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d52d0a632201f916d6ab","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"6275d3a70a6322013c9dc11f","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.005,"update_token_price_in_sc":false,"image_url":null}},{"id":"60f5d0210751f201483f3947","type":"tokens","attributes":{"name":"BNB","address":null,"price_in_dollars":282.05,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef7d1411784f02dae91295","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef659357566a009678e813","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0006,"update_token_price_in_sc":false,"image_url":null}},{"id":"60ef0e2122464b08800cde89","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0007,"update_token_price_in_sc":false,"image_url":null}}],"meta":{"current_page":1,"next_page":1,"prev_page":1,"total_pages":1,"total_count":9}}'
+  recorded_at: Thu, 02 Nov 2023 17:01:15 GMT
+recorded_with: VCR 6.0.0

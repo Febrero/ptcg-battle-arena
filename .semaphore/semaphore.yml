@@ -1,0 +1,101 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+blocks:
+  - name: Code Analysis
+    dependencies: []
+    run:
+      when: "branch = 'master' or tag =~ '^v([0-9.]+)$'  or branch = 'staging'"
+    task:
+      jobs:
+        - name: code analysis
+          commands:
+            - echo "whould be doing code analysis"
+            - "echo ${SEMAPHORE_GIT_TAG_NAME}"
+      secrets:
+        - name: DockerhubAuth
+  - name: Check Style and Security
+    dependencies:
+      - Code Analysis
+    task:
+      jobs:
+        - name: Security
+          commands:
+            - checkout
+            - sem-service start mongodb 3.6
+            - sem-service start redis 7
+            - sem-version ruby 3.2.3
+            # - cache restore
+            - rm -rf /home/semaphore/realfevr-battle-arena-apis/vendor/bundle/ruby/3.0.0/cache/bundler/git/faker-9fbfdc74b06b6ae28040c03e3de8c9c3b48df274
+            - bundle install --deployment --path vendor/bundle
+            - cache store
+            - "bundle exec rake db:mongoid:create_indexes"
+            - bundle exec bundle-audit check --update --config bundler-audit.yml
+            - bundle exec brakeman -A
+  - name: Test
+    dependencies:
+      - Code Analysis
+    task:
+      env_vars:
+        - name: RAILS_ENV
+          value: test
+      jobs:
+        - name: Test
+          commands:
+            - checkout
+            - sem-service start mongodb 3.6
+            - sem-service start redis 7
+            - sem-version ruby 3.2.3
+            # - cache restore
+            - rm -rf /home/semaphore/realfevr-battle-arena-apis/vendor/bundle/ruby/3.0.0/cache/bundler/git/faker-9fbfdc74b06b6ae28040c03e3de8c9c3b48df274
+            - rm -rf /home/semaphore/realfevr-battle-arena-apis/vendor/bundle/ruby/3.0.0/cache/bundler/git/fantasy-revolution-rewards-gem-96e6bd990836f7c0bdfa674fc8bdc8c154214bfe
+            - bundle install --deployment --path vendor/bundle
+            - cache store
+            - "bundle exec rake db:mongoid:create_indexes"
+            - bundle exec rspec
+      secrets:
+        - name: arena-api-master-key
+  - name: Docker Build Master Tag
+    dependencies:
+      - Test
+    run:
+      when: "tag =~ '^v([0-9.]+)$'"
+    task:
+      prologue:
+        commands:
+          - checkout
+          - 'echo "${DOCKERHUB_PASSWORD}" | docker login --username "${DOCKERHUB_USERNAME}" --password-stdin'
+      jobs:
+        - name: Build battle arena api image based on tag name and push to docker
+          commands:
+            - 'docker build --tag "realfevr/realfevr-battle-arena-apis:${SEMAPHORE_GIT_TAG_NAME}" --cache-from="realfevr/realfevr-battle-arena-apis:${SEMAPHORE_GIT_TAG_NAME}" --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --target production -f Dockerfile .'
+            - 'docker push "realfevr/realfevr-battle-arena-apis:${SEMAPHORE_GIT_TAG_NAME}"'
+      secrets:
+        - name: DockerhubAuth
+  - name: Docker Build Staging Env
+    dependencies:
+      - Test
+    run:
+      when: "branch = 'staging'"
+    task:
+      prologue:
+        commands:
+          - checkout
+          - 'echo "${DOCKERHUB_PASSWORD}" | docker login --username "${DOCKERHUB_USERNAME}" --password-stdin'
+      jobs:
+        - name: "Build realfevr-battle-arena image based on ${SEMAPHORE_GIT_BRANCH} branch and push to docker"
+          commands:
+            - 'docker build --tag "realfevr/realfevr-battle-arena-apis:${SEMAPHORE_GIT_BRANCH}" --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) --target ${SEMAPHORE_GIT_BRANCH} -f Dockerfile .'
+            - 'docker push "realfevr/realfevr-battle-arena-apis:${SEMAPHORE_GIT_BRANCH}"'
+      secrets:
+        - name: DockerhubAuth
+promotions:
+  - name: Deploy to Production
+    pipeline_file: deploy-k8s-production.yml
+  - name: Deploy to Staging
+    pipeline_file: deploy-k8s-staging.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'staging'"

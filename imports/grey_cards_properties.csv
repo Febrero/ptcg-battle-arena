@@ -1,0 +1,261 @@
+videoposition,rarity,cards,player,drop,position,defense,attack,stamina,ball_stopper,super_sub,inspire,captain,man_mark,long_passer,enforcer,box_to_box,dribbler,power
+1,Starter,1,Moussa Marega,FE,Forward,0,1,2,,X,,,,,,,,5
+2,Starter,1,William Carvalho,FE,Midfielder,2,0,1,,,,,,,,,,3
+3,Starter,1,Ezequiel Garay,FE,Defender,2,0,1,X,,,,,,,,,7
+4,Starter,1,Lisandro López,FE,Forward,0,1,2,,,,,,,,,,3
+5,Starter,1,Marcos Rojo,FE,Defender,1,0,2,X,,,,,,,,,7
+6,Starter,1,Diogo Jota,FE,Forward,0,2,1,,,S1,,,,,,,4
+7,Starter,1,Kostas Mitroglou,FE,Forward,0,1,2,,,,,,,,,,3
+8,Starter,1,Hyun-jun Suk,FE,Forward,0,2,2,,,,S1,,,,,,5
+9,Starter,1,Óscar Cardozo,FE,Forward,0,2,1,,,,S1,,,,,,4
+10,Starter,1,Cristian Tello,FE,Midfielder,0,1,2,,,S1,,,,,,,4
+11,Starter,1,Shoya Nakajima,FE,Midfielder,0,2,1,,,,S1,,,,,,4
+12,Starter,1,Ahmed Hassan,FE,Forward,0,2,1,,,S1,,,,,,,4
+13,Starter,1,Rodrigo Moreno,FE,Forward,0,1,3,,,,,,,,,,4
+14,Starter,1,Óliver Torres,FE,Midfielder,1,1,2,,,,S1,,,,,,4
+15,Starter,1,Eduardo Salvio,FE,Midfielder,0,1,2,,,,S1,,,,,,4
+16,Starter,1,Enzo Pérez,FE,Midfielder,3,2,1,,,,,,,,,,4
+17,Starter,1,Yacine Brahimi,FE,Midfielder,0,2,1,,,,,,,,,,3
+18,Starter,1,Rui Patrício,FE,Goalkeeper,6,1,2,,,,S1,,,,,,9
+19,Starter,1,João Moutinho,FE,Midfielder,1,1,3,,,,,,,,,,4
+20,Starter,1,Héctor Herrera,FE,Midfielder,1,1,2,,,,,,,,,,3
+21,Starter,1,Axel Witsel,FE,Midfielder,2,1,1,,,,,,,,,,3
+22,Starter,1,Nicolás Gaitán,FE,Midfielder,0,1,2,,,,,,,,,,3
+23,Starter,1,Islam Slimani,FE,Forward,0,2,1,,,,,,,,,,3
+24,Starter,1,Vincent Aboubakar,FE,Forward,0,1,3,,,S1,,,,,,,5
+25,Starter,1,Eric Dier,FE,Defender,1,0,2,X,,,,,,,,,7
+26,Starter,1,Teófilo Gutiérrez,FE,Forward,0,1,2,,,,S1,,,,,,4
+27,Starter,1,Anderson Talisca,FE,Midfielder,0,2,1,,,S1,,,,,,,4
+28,Starter,1,Fábio Coentrão,FE,Defender,2,1,2,,,,,,,,,,4
+29,Starter,1,André Gomes,FE,Midfielder,1,1,3,,,,,,,,,,4
+30,Starter,1,André Carrillo,FE,Midfielder,0,2,1,,,,,,,,,,3
+31,Starter,1,Nicolás Otamendi,FE,Defender,2,0,1,,,,,,,,,,3
+32,Starter,1,Victor Lindelöf,FE,Defender,1,0,2,X,,,,,,,,,7
+33,Starter,1,André Silva,FE,Forward,0,1,3,,,S1,,,,,,,5
+34,Starter,1,Alex Telles,FE,Defender,1,1,2,,,,,,,,,,3
+35,Starter,1,Danilo Pereira,FE,Midfielder,2,0,2,,,,,,,,,,4
+36,Starter,1,Fredy Guarín,FE,Midfielder,1,1,2,,,,,,,,,,3
+37,Starter,1,Juan Quintero,FE,Midfielder,0,1,2,,,S1,,,,,,,4
+38,Starter,1,Ederson,FE,Goalkeeper,5,0,3,,,,,,,,,,8
+39,Starter,1,Nélson Semedo,FE,Defender,1,0,2,,,,,,,,,,3
+40,Starter,1,Pepe,FE,Defender,3,0,1,X,,,,,,,,,8
+41,Starter,1,Jonas,FE,Forward,0,3,1,,,,S1,,,,,,5
+42,Starter,1,Mário Jardel,FE,Forward,0,2,2,,X,,,,,,,,6
+43,Starter,1,Lucho González,FE,Midfielder,1,3,1,,,,S1,,,,,,5
+44,Starter,1,Benni McCarthy,FE,Forward,0,1,3,,,S1,,,,,,,5
+45,Starter,1,Fabrizio Miccoli,FE,Forward,0,2,2,,,S1,,,,,,,5
+46,Starter,1,Jackson Martínez,FE,Forward,0,1,3,,,,S1,,,,,,5
+47,Starter,1,Júlio César,FE,Goalkeeper,4,0,4,,,,S1,,,,,,9
+48,Starter,1,Rui Costa,FE,Midfielder,1,1,3,,,S1,,,,,,,5
+49,Starter,1,Raul Meireles,FE,Midfielder,2,1,2,,,,,,,,,,4
+50,Starter,1,Alex Sandro,FE,Defender,3,1,2,,,,,,,,,,5
+51,Starter,1,Renato Sanches,FE,Midfielder,2,2,2,,,,,,,,,,4
+52,Starter,1,Jan Oblak,FE,Goalkeeper,3,0,5,,,,,,,,,,8
+53,Starter,1,Deco,FE,Midfielder,2,2,2,,,,,,,,,,4
+54,Starter,1,Daniel Osvaldo,FE,Forward,0,2,2,,,S1,,,,,,,5
+55,Starter,1,Pablo Aimar,FE,Midfielder,1,3,1,,,,S1,,,,,,5
+56,Starter,1,Freddy Adu,FE,Forward,0,1,3,,,,,,,,,,4
+57,Starter,1,Anderson,FE,Midfielder,1,1,4,,,,,,,,,,5
+58,Starter,1,Diego Ribas,FE,Midfielder,0,3,1,,,,,,,,,,4
+59,Starter,1,Casemiro,FE,Midfielder,2,1,3,,,,,,,,,,5
+60,Starter,1,David Luiz,FE,Defender,1,0,4,X,,,,,,,,,9
+61,Starter,1,Rúben Neves,FE,Midfielder,1,1,4,,,,,,,,,,5
+62,Starter,1,Rúben Dias,FE,Defender,3,0,2,X,,,,,,,,,9
+63,Starter,1,Nani,FE,Midfielder,0,1,4,,X,,,,,,,,7
+64,Starter,1,Nemanja Matić,FE,Midfielder,4,1,1,,,,,,,,,,5
+65,Starter,1,Raúl Jiménez,FE,Forward,0,3,2,,,,,,,,,,5
+66,Starter,1,Ricardo Quaresma,FE,Midfielder,0,2,3,,,,,,,,,,5
+67,Starter,1,Radamel Falcao,FE,Forward,0,1,4,,,S1,,,,,,,6
+68,Starter,1,Ángel Di María,FE,Midfielder,0,3,2,,,S1,,,,,,,6
+69,Starter,1,Hulk,FE,Forward,0,4,1,,,,,,,,,,5
+70,Starter,1,James Rodríguez,FE,Midfielder,0,3,2,,,,,,,,,,5
+71,Starter,1,Iker Casillas,FE,Goalkeeper,4,0,4,,,S1,,,,,,,9
+72,Starter,1,Cristiano Ronaldo,FE,Forward,0,3,2,,X,,,,,,,,7
+73,Starter,1,Bruno Fernandes,FE,Midfielder,1,3,2,,,,,,,,,,5
+74,Starter,1,Rúben Amorim,#2,Midfielder,1,0,2,,,,,,,,,,3
+75,Starter,1,Jovane Cabral,#2,Midfielder,0,2,1,,,,,,,,,,3
+76,Starter,1,Cédric Soares,#2,Defender,1,1,2,,X,,,,,,,,5
+77,Starter,1,Éder Militão,#2,Defender,2,0,1,X,,,,,,,,,7
+78,Starter,1,Deco,#2,Midfielder,1,1,3,,,S1,,,,,,,5
+79,Starter,1,Hulk,#2,Forward,0,2,1,,X,,,,,,,,5
+80,Starter,1,Éder Lopes,#2,Forward,0,2,1,,,,,,,,,,3
+81,Starter,1,Óliver Torres,#2,Midfielder,2,2,1,,,,S1,,,,,,4
+82,Starter,1,Rafa Silva,#2,Midfielder,0,2,2,,X,,,,,,,,6
+83,Starter,1,Marat Izmailov,#2,Midfielder,0,1,2,,,,S1,,,,,,4
+84,Starter,1,Rui Patrício,#2,Goalkeeper,5,0,2,,,,,,,,,,7
+85,Starter,1,Rui Costa,#2,Midfielder,1,3,1,,,,S1,,,,,,5
+86,Starter,1,Nemanja Matić,#2,Midfielder,3,1,1,,,,,,,,,,4
+87,Starter,1,Iker Casillas,#2,Goalkeeper,4,0,2,,,S1,,,,,,,7
+88,Starter,1,Carlos Vinícius,#2,Forward,0,1,2,,,S1,,,,,,,4
+89,Starter,1,Vítor Baía,#2,Goalkeeper,3,0,3,,,,S1,,,,,,7
+90,Starter,1,Jesús Corona,#2,Midfielder,1,2,1,,,,,,,,,,3
+91,Starter,1,James Rodríguez,#2,Midfielder,0,2,2,,X,,,,,,,,6
+92,Starter,1,Diogo Jota,#2,Forward,0,1,2,,,,S1,,,,,,4
+93,Starter,1,João Félix,#2,Forward,0,3,1,,,,,,,,,,4
+94,Starter,1,Miguel Veloso,#2,Midfielder,1,0,3,,,,,,,,,,4
+95,Starter,1,Matheus Pereira,#2,Midfielder,0,1,3,,X,,,,,,,,6
+96,Starter,1,Bruno Alves,#2,Defender,3,0,1,X,,,,,,,,,8
+97,Starter,1,Ronny,#2,Defender,2,1,2,,,,,,,,,,4
+98,Starter,1,Victor Lindelöf,#2,Defender,2,0,2,,,,,,,,,,4
+99,Starter,1,Simão Sabrosa,#2,Midfielder,0,3,1,,X,,,,,,,,6
+100,Starter,1,Jérémy Mathieu,#2,Defender,2,0,2,X,,,,,,,,,8
+101,Starter,1,Alex Telles,#2,Defender,1,1,3,,,,,,,,,,4
+102,Starter,1,Hugo Viana,#2,Midfielder,1,1,3,,,,S1,,,,,,5
+103,Starter,1,Bruno Fernandes,#2,Midfielder,1,1,3,,,S1,,,,,,,5
+104,Starter,1,Danilo Pereira,#2,Midfielder,1,0,4,,,,,,,,,,5
+105,Starter,1,Héctor Herrera,#2,Midfielder,2,2,3,,X,,,,,,,,7
+106,Starter,1,Radamel Falcao,#2,Forward,0,3,2,,,S1,,,,,,,6
+107,Starter,1,Jackson Martínez,#2,Forward,0,1,4,,,,,,,,,,5
+108,Starter,1,Nicolás Gaitán,#2,Midfielder,0,4,1,,,,S1,,,,,,6
+109,Starter,1,Liedson,#2,Forward,0,3,2,,X,,,,,,,,7
+110,Starter,1,Nuno Gomes,#2,Forward,0,1,4,,,,S1,,,,,,6
+111,Starter,1,Przemysław Kaźmierczak,#2,Midfielder,4,2,1,,,,,,,,,,5
+112,Starter,1,Pablo Aimar,#2,Midfielder,1,2,3,,,S1,,,,,,,6
+113,Starter,1,Ángel Di María,#2,Midfielder,0,3,2,,X,,,,,,,,7
+114,Starter,1,Nani,#2,Midfielder,0,1,4,,X,,,,,,,,7
+115,Starter,1,José Luis Chilavert,#2,Goalkeeper,6,1,2,,,,,,,,,,8
+116,Starter,1,Cristiano Ronaldo,#2,Forward,0,2,3,,X,,,,,,,,7
+117,Starter,1,Fabio Quagliarella,#3,Forward,0,2,1,,X,,,,,,,,5
+118,Starter,1,Joe Hart,#3,Goalkeeper,4,0,4,,,,,,,,,,8
+119,Starter,1,Juan Iturbe,#3,Midfielder,0,2,1,,X,,,,,,,,5
+120,Starter,1,Nicolas N'Koulou,#3,Defender,2,0,1,X,,,,,,,,,7
+121,Starter,1,Francesco Totti,#3,Forward,0,3,1,,,,S1,,,,,,5
+122,Starter,1,Roberto Baggio,#3,Midfielder,0,1,3,,,S1,,,,,,,5
+123,Starter,1,Jorginho,#3,Midfielder,3,0,1,,,,,,,,,,4
+124,Starter,1,Cristiano Ronaldo,#3,Forward,0,1,2,,,S1,,,,,,,4
+125,Starter,1,Gianluigi Buffon,#3,Goalkeeper,2,0,6,,,,S1,,,,,,9
+126,Starter,1,Hernán Crespo,#3,Forward,0,2,2,,,,,,,,,,4
+127,Starter,1,Diego Simeone,#3,Midfielder,2,1,2,,,,,,,,,,4
+128,Starter,1,Siniša Mihajlović,#3,Defender,2,1,1,,,,,,,,,,3
+129,Starter,1,Ciro Immobile,#3,Forward,0,3,1,,,S1,,,,,,,5
+130,Starter,1,Cristian Ansaldi,#3,Defender,3,1,1,,,,S1,,,,,,5
+131,Starter,1,Nicola Bellomo,#3,Midfielder,1,3,1,,X,,,,,,,,6
+132,Starter,1,Clarence Seedorf,#3,Midfielder,2,3,1,,,,S1,,,,,,5
+133,Starter,1,Robinho,#3,Midfielder,0,2,2,,X,,,,,,,,6
+134,Starter,1,Antonio Cassano,#3,Forward,0,3,1,,X,,,,,,,,6
+135,Starter,1,Chris Smalling,#3,Defender,3,0,1,X,,,,,,,,,8
+136,Starter,1,Robin Gosens,#3,Defender,1,1,3,,,,,,,,,,4
+137,Starter,1,Gianluca Pagliuca,#3,Goalkeeper,6,1,2,,,,,,,,,,8
+138,Starter,1,Romelu Lukaku,#3,Forward,0,1,3,,,S1,,,,,,,5
+139,Starter,1,Paul Pogba,#3,Midfielder,1,1,3,,X,,,,,,,,6
+140,Starter,1,Adriano,#3,Forward,0,2,2,,,S1,,,,,,,5
+141,Starter,1,Marco Ferrante,#3,Forward,0,2,3,,,S1,,,,,,,6
+142,Starter,1,Saša Lukić,#3,Midfielder,3,2,2,,,,,,,,,,5
+143,Starter,1,Theo Hernández,#3,Defender,4,0,1,X,,,,,,,,,9
+144,Starter,1,Adrian Mutu,#3,Forward,0,2,3,,X,,,,,,,,7
+145,Starter,1,Franck Ribéry,#3,Midfielder,0,2,3,,,S1,,,,,,,6
+146,Starter,1,Aleksandar Kolarov,#3,Defender,3,1,2,,,,,,,,,,5
+147,Starter,1,Érik Lamela,#3,Midfielder,0,4,1,,X,,,,,,,,7
+148,Starter,1,Wojciech Szczęsny,#3,Goalkeeper,3,0,3,,,S1,,,,,,,7
+149,Starter,1,Diego Milito,#3,Forward,0,1,4,,,,S1,,,,,,6
+150,Starter,1,Andrea Pirlo,#3,Midfielder,3,3,2,,,,,,,,,,5
+151,Starter,1,Edinson Cavani,#3,Forward,0,2,3,,,S1,,,,,,,6
+152,Starter,1,Pol Lirola,#3,Defender,2,0,3,,,,,,,,,,5
+153,Starter,1,Gianluca Comotto,#3,Defender,3,1,2,,,,,,,,,,5
+154,Starter,1,Marco Benassi,#3,Midfielder,0,4,1,,,,,,,,,,5
+155,Starter,1,Gianluigi Donnarumma,#3,Goalkeeper,2,0,5,,,,,,,,,,7
+156,Starter,1,Ronaldinho,#3,Midfielder,0,4,1,,X,,,,,,,,7
+157,Starter,1,Júlio Baptista,#3,Midfielder,1,4,1,,,,,,,,,,5
+158,Starter,1,Maicon,#3,Defender,1,1,4,,,,,,,,,,5
+159,Starter,1,Zlatan Ibrahimović,#3,Forward,0,2,3,,,,,,,,,,5
+160,Starter,1,Paulo Dybala,#3,Forward,0,2,3,,X,,,,,,,,7
+161,Starter,1,Alessio Cerci,#3,Midfielder,0,1,4,,,,,,,,,,5
+162,Starter,1,Andrea Belotti,#3,Forward,0,3,2,,,,,,,,,,5
+163,Starter,1,Matteo Darmian,#3,Defender,3,1,2,,,,,,,,,,5
+164,Starter,1,Salvatore Sirigu,#3,Goalkeeper,2,0,6,,,,S1,,,,,,9
+193,Starter,1,Raúl,#5,Forward,0,1,2,,,,S1,,,,,,4
+194,Starter,1,Diego Tristán,#5,Forward,0,1,3,,,S1,,,,,,,5
+195,Starter,1,Neymar,#5,Forward,0,2,1,,,,,,,,,,3
+196,Starter,1,Aleksandr Mostovoi,#5,Midfielder,0,1,2,,,,,,,,,,3
+197,Starter,1,Héctor Bellerín,#5,Defender,1,1,3,,,,,,,,,,4
+198,Starter,1,Unai Simón,#5,Goalkeeper,3,0,5,,,S1,,,,,,,9
+199,Starter,1,Frédéric Kanouté,#5,Forward,0,2,3,,X,,,,,,,,7
+200,Starter,1,Hugo Sánchez,#5,Forward,0,1,4,,,,,,,,,,5
+201,Starter,1,Diego Capel,#5,Midfielder,0,2,2,,,S1,,,,,,,5
+202,Starter,1,Xavi Aguado,#5,Defender,1,0,3,,,,,,,,,,4
+203,Starter,1,Juanfran,#5,Defender,2,0,2,,,,,,,,,,4
+204,Starter,1,Santiago Cañizares,#5,Goalkeeper,3,0,4,,,,,,,,,,7
+205,Starter,1,Samuel Eto'o,#5,Forward,0,3,2,,,,,,,,,,5
+206,Starter,1,Cristiano Ronaldo,#5,Forward,0,4,1,,,,,,,,,,5
+207,Starter,1,Diego Maradona,#5,Midfielder,0,1,4,,,,,,,,,,5
+208,Starter,1,Andrés Iniesta,#5,Midfielder,2,4,1,,,,,,,,,,5
+209,Starter,1,Roberto Carlos,#5,Defender,1,1,4,,X,,,,,,,,7
+210,Starter,1,Iker Casillas,#5,Goalkeeper,5,0,3,,,,,,,,,,8
+211,Starter,1,Claudio López,#5,Forward,0,3,2,,,,,,,,,,5
+212,Starter,1,Lionel Messi,#5,Forward,0,3,2,,,,,,,,,,5
+213,Starter,1,Paulo Futre,#5,Midfielder,0,2,3,,,,,,,,,,5
+214,Starter,1,David Beckham,#5,Midfielder,1,1,4,,,,,,,,,,5
+215,Starter,1,Jordi Alba,#5,Defender,2,2,3,,,,S1,,,,,,6
+216,Starter,1,Andoni Zubizarreta,#5,Goalkeeper,5,0,2,,,S1,,,,,,,8
+217,Starter,1,Gareth Bale,#5,Forward,0,1,4,,,,,,,,,,5
+218,Starter,1,Luís Figo,#5,Midfielder,0,4,1,,,,,,,,,,5
+219,Starter,1,Theo Hernández,#5,Defender,4,1,1,,,,,,,,,,5
+220,Starter,1,Thibaut Courtois,#5,Goalkeeper,5,0,3,,,S1,,,,,,,9
+221,Starter,1,Friday Etim,#6,Forward,0,2,2,,,S1,,,,,,,5
+222,Starter,1,Al Musrati,#6,Midfielder,3,0,1,,,,,,,,,,4
+223,Starter,1,Famana Quizera,#6,Midfielder,0,2,2,,X,,,,,,,,6
+224,Starter,1,Erivaldo Almeida,#6,Defender,1,0,3,X,,,,,,,,,8
+225,Starter,1,Tiago Esgaio,#6,Defender,2,0,1,,,,,,,,,,3
+226,Starter,1,Antonio Adán,#6,Goalkeeper,4,0,3,,,S1,,,,,,,8
+227,Starter,1,Toni Martínez,#6,Forward,0,4,1,,X,,,,,,,,7
+228,Starter,1,Petar Musa,#6,Forward,0,3,1,,,,S1,,,,,,5
+229,Starter,1,Francisco Trincão,#6,Midfielder,0,3,2,,,,,,,,,,5
+230,Starter,1,Gonçalo Inácio,#6,Defender,2,0,3,X,,,,,,,,,9
+231,Starter,1,Iván Marcano,#6,Defender,2,0,3,,,,,,,,,,5
+232,Starter,1,Odysseas Vlachodimos,#6,Goalkeeper,2,0,4,,,,,,,,,,6
+233,Starter,1,Gonçalo Ramos,#6,Forward,0,1,4,,,,,,,,,,5
+234,Starter,1,Paulinho,#6,Forward,0,1,4,,,,,,,,,,5
+235,Starter,1,Marcus Edwards,#6,Midfielder,0,3,2,,,,,,,,,,5
+236,Starter,1,Alan Ruiz,#6,Midfielder,0,2,3,,,,,,,,,,5
+237,Starter,1,João Mário,#6,Defender,1,1,4,,,,,,,,,,5
+238,Starter,1,Thiago,#6,Goalkeeper,3,0,4,,,,S1,,,,,,8
+239,Starter,1,Mehdi Taremi,#6,Forward,0,4,1,,,,S1,,,,,,6
+240,Starter,1,David Neres,#6,Midfielder,0,2,3,,,,,,,,,,5
+241,Starter,1,Pedro Porro,#6,Defender,1,1,4,,,,,,,,,,5
+242,Starter,1,Pepe,#6,Defender,2,0,3,,,,,,,,,,5
+243,Starter,1,Stephen Eustáquio,#6,Midfielder,4,1,1,,,,,,,,,,5
+244,Starter,1,Luis García,#7,Forward,0,3,1,,,,,,,,,,4
+245,Starter,1,Finidi George,#7,Forward,0,2,2,,X,,,,,,,,6
+246,Starter,1,Emilio Butragueño,#7,Forward,0,3,1,,,,S1,,,,,,5
+247,Starter,1,Mikel Oyarzabal,#7,Midfielder,0,1,2,,,,,,,,,,3
+248,Starter,1,David Silva,#7,Midfielder,1,2,1,,,,,,,,,,3
+249,Starter,1,Rivaldo,#7,Midfielder,0,1,2,,,,,,,,,,3
+250,Starter,1,José Mari Bakero,#7,Midfielder,1,2,1,,,,,,,,,,3
+251,Starter,1,Mikel Lasa,#7,Defender,2,0,2,,,,,,,,,,4
+252,Starter,1,Jon Aurtenetxe,#7,Defender,3,0,1,,,,,,,,,,4
+253,Starter,1,Rafael Gordillo,#7,Defender,1,0,3,X,,,,,,,,,8
+254,Starter,1,Claudio Bravo,#7,Goalkeeper,2,0,4,,,,S1,,,,,,7
+255,Starter,1,Diego López,#7,Goalkeeper,2,0,5,,,,S1,,,,,,8
+256,Starter,1,Iñaki Williams,#7,Forward,0,4,1,,,,,,,,,,5
+257,Starter,1,David Villa,#7,Forward,0,4,1,,,,,,,,,,5
+258,Starter,1,Ricardo Oliveira,#7,Forward,0,3,2,,,,,,,,,,5
+259,Starter,1,Philippe Coutinho,#7,Midfielder,1,2,2,,,,,,,,,,4
+260,Starter,1,Diego Maradona,#7,Midfielder,0,3,1,,,,,,,,,,4
+261,Starter,1,Ángel Di María,#7,Midfielder,0,1,3,,,,,,,,,,4
+262,Starter,1,Sébastien Squillaci,#7,Defender,4,0,1,X,,,,,,,,,9
+263,Starter,1,Juan Miranda,#7,Defender,3,0,1,,,,,,,,,,4
+264,Starter,1,Pablo Cavallero,#7,Goalkeeper,2,0,6,,,S1,,,,,,,9
+265,Starter,1,Iago Herrerín,#7,Goalkeeper,5,0,2,,,,S1,,,,,,8
+266,Starter,1,Gaby Amato,#7,Forward,0,4,1,,,,,,,,,,5
+267,Starter,1,Diego Costa,#7,Forward,0,2,3,,,,,,,,,,5
+268,Starter,1,Neymar,#7,Midfielder,0,3,2,,,,,,,,,,5
+269,Starter,1,Juan Mata,#7,Midfielder,1,1,4,,,,,,,,,,5
+270,Starter,1,Pep Guardiola,#7,Midfielder,2,2,3,,,,,,,,,,5
+271,Starter,1,Miranda,#7,Defender,3,0,2,,,,,,,,,,5
+272,Starter,1,Marcos Alonso Peña,#7,Defender,4,0,1,,,,,,,,,,5
+273,Starter,1,David Soria,#7,Goalkeeper,4,0,2,,,,,,,,,,6
+274,Starter,1,Jimmy Floyd Hasselbaink,#7,Forward,0,4,1,,,,,,,,,,5
+275,Starter,1,Luis Suárez,#7,Forward,0,1,4,,,,,,,,,,5
+276,Starter,1,Bernd Schuster,#7,Midfielder,1,1,4,,,,,,,,,,5
+277,Starter,1,Gaizka Mendieta,#7,Midfielder,1,1,4,,,,,,,,,,5
+278,Starter,1,Gerard Piqué,#7,Defender,4,0,1,,,,,,,,,,5
+279,Starter,1,Marc-André ter Stegen,#7,Goalkeeper,4,0,3,,,,,,,,,,7
+280,Starter,1,Lionel Messi,#7,Forward,0,2,3,,,,,,,,,,5
+281,Starter,1,Cristiano Ronaldo,#7,Forward,0,4,1,,,,,,,,,,5
+282,Starter,1,Xavi,#7,Midfielder,2,2,3,,,,,,,,,,5
+283,Starter,1,Iker Casillas,#7,Goalkeeper,3,0,5,,,,,,,,,,8
+284,Starter,1,Rodrygo,#Y1,Midfielder,0,4,1,,,,,,,,,,5
+285,Starter,1,Lucas Torró,#Y1,Midfielder,3,1,2,,,,,,,,,,5
+286,Starter,1,Rodrygo,#Y1,Midfielder,0,3,2,,,,,,,,,,5
+287,Starter,1,Christopher Nkunku,#Y2,Midfielder,0,2,3,,,,,,,,,,5
+288,Starter,1,Dominik Szoboszlai,#Y2,Midfielder,0,3,2,,,,,,,,,,5

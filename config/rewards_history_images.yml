@@ -1,0 +1,44 @@
+fevr:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/fevr/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/fevr/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/fevr/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/fevr/image_4.png"
+bnb:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/bnb/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/bnb/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/bnb/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/bnb/image_4.png"
+eth:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/eth/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/eth/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/eth/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/eth/image_4.png"
+usdt:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/usdt/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/usdt/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/usdt/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/usdt/image_4.png"
+xp:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_4.png"
+  image_5: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_5.png"
+  image_6: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_6.png"
+  image_7: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/xp/image_7.png"
+avatar:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/avatar/image_1.png"
+nft:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/nft/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/nft/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/nft/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/nft/image_4.png"
+  image_5: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/nft/image_5.png"
+pack:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/pack/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/pack/image_2.png"
+ticket:
+  image_1: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/ticket/image_1.png"
+  image_2: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/ticket/image_2.png"
+  image_3: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/ticket/image_3.png"
+  image_4: "https://realfevr-production.s3.eu-central-1.amazonaws.com/rewards/ticket/image_4.png"

@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: realfevr-battle-arena-apis-mongo-indexes-creation
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: realfevr-battle-arena-apis-mongo-indexes-creation
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:staging'
+          command: ['bundle', 'exec', 'rake', 'db:mongoid:create_indexes']
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+      hostAliases:
+        - ip: 10.135.126.103
+          hostnames:
+            - mongodb-staging
+            - redis-staging
+      imagePullSecrets:
+        - name: docker-cre
+  backoffLimit: 4

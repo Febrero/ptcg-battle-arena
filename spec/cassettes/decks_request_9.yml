@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=4,4,5,5,6,6&wallet_addr=0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"8617f3f3bfd6572ffbe0dfd5e8fd4103"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9910e9a5-6a33-46aa-8fa8-5b2e183a7720
+      X-Runtime:
+      - '0.023780'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"6275e412b54c3300983e1883","type":"nfts","attributes":{"uid":6,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":9,"position":"Forward","listed":false,"opened":true}},{"id":"6275e412b54c3300983e1872","type":"nfts","attributes":{"uid":5,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":11,"position":"Midfielder","listed":false,"opened":true}},{"id":"6275e412b54c3300983e1861","type":"nfts","attributes":{"uid":4,"wallet_addr":"0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2","video_id":7,"position":"Forward","listed":false,"opened":true}}],"meta":{"current_page":0,"next_page":1,"prev_page":1,"total_pages":1,"total_count":3}}'
+  recorded_at: Thu, 26 Oct 2023 17:05:17 GMT
+recorded_with: VCR 6.0.0

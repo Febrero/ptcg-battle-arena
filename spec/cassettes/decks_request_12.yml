@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 38e0308c-0e4f-4bca-9136-b66a40bee7f9
+      X-Runtime:
+      - '0.002470'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 24 May 2022 14:42:28 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x6c2005f258d8d1ef92d0a1e86b68e884d1808fb2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cba1b3fab7ca587ae40d079063318fa2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea595c76-ec8f-4943-9216-661daa6fe811
+      X-Runtime:
+      - '0.033206'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Tue, 24 May 2022 14:42:28 GMT
+recorded_with: VCR 6.0.0

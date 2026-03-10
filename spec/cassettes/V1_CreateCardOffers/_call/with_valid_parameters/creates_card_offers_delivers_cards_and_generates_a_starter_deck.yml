@@ -1,0 +1,215 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/nfts/check_ownership?nft_ids=&wallet_addr=valid_wallet_addr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"39ed3b9c43a2523c08e4cc38be9606ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 26c2d522-2519-4b76-a8f0-ff97ad948bba
+      X-Runtime:
+      - '0.013045'
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Content-Length:
+      - '44'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"valid":[],"invalid":[]}'
+  recorded_at: Wed, 28 Feb 2024 11:19:42 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/nfts/check_ownership?nft_ids=&wallet_addr=valid_wallet_addr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"39ed3b9c43a2523c08e4cc38be9606ac"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 833d174d-9af6-434c-8deb-423e2826515d
+      X-Runtime:
+      - '0.011333'
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Content-Length:
+      - '44'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"valid":[],"invalid":[]}'
+  recorded_at: Wed, 28 Feb 2024 11:19:42 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=valid_wallet_addr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - nfts_123
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ef4ab431b1459bbabc53d3b1e3f68695"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a92c719-25de-4cc1-896b-2ecfb85eb634
+      X-Runtime:
+      - '0.011449'
+      Vary:
+      - Accept-Encoding, Origin
+      Content-Length:
+      - '95'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 28 Feb 2024 11:19:42 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=valid_wallet_addr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - nfts_123
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ef4ab431b1459bbabc53d3b1e3f68695"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 91504adc-1a26-40ef-8073-0beea5c8d4ff
+      X-Runtime:
+      - '0.010970'
+      Vary:
+      - Accept-Encoding, Origin
+      Content-Length:
+      - '95'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 28 Feb 2024 11:19:42 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,1003 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 391d2d64-e149-451d-b833-cacf582d581f
+      X-Runtime:
+      - '0.068115'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dee6dd47-e532-4b9a-91ba-12a52a512547
+      X-Runtime:
+      - '0.006974'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e218f5e0-db41-41f4-b3ec-4d07f4aa3ae6
+      X-Runtime:
+      - '0.004675'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d22c6425-c6f4-46e9-b466-010653ccfd1c
+      X-Runtime:
+      - '0.006704'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b25e041-b1b5-43c7-9381-e9e1c7ff2fdd
+      X-Runtime:
+      - '0.002212'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a2295bf1-6716-444e-8125-4f777fa2e312
+      X-Runtime:
+      - '0.007418'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2f6e917b-fce7-496c-8ce4-35cf000c6168
+      X-Runtime:
+      - '0.003635'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 29bb89a6-abe6-4839-bf20-d85c24cf3326
+      X-Runtime:
+      - '0.005291'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 685c7574-0b8c-4ca0-9606-9ffb5a89734c
+      X-Runtime:
+      - '0.005187'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b93081d-8a61-4c20-b6cd-2b06a59dd042
+      X-Runtime:
+      - '0.004245'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 43b17338-6b47-4624-a3f9-883db48ff5ce
+      X-Runtime:
+      - '0.007561'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e39299fb-837d-4d8b-b7b9-f14589235fc5
+      X-Runtime:
+      - '0.003353'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aa7b8e05-09b1-46d9-b332-f0cf10d3238d
+      X-Runtime:
+      - '0.002592'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9390d98f-0b65-4031-9267-120ee5cc7cc0
+      X-Runtime:
+      - '0.004396'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 91109e6d-11eb-4523-a991-da5016c2acc2
+      X-Runtime:
+      - '0.003331'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 34ba958b-39d8-4fd2-b3b6-5c03d4e34748
+      X-Runtime:
+      - '0.003823'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e519e0cd-5ef6-4ce2-8658-6fea38c0ebf0
+      X-Runtime:
+      - '0.005539'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - be28a722-7b92-4363-82a1-7e8ecd533ff3
+      X-Runtime:
+      - '0.004110'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/not_included/0x123?uid=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Etag:
+      - W/"6a2fa062cb893c8f9a492c477c73f418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9bf3b16a-5178-4ca3-8b80-030a574d9229
+      X-Runtime:
+      - '0.002495'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[]}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+- request:
+    method: get
+    uri: http://localhost:3100/nfts.json?order=price_asc&per_page=96&uid=&wallet_addr=0x123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"e0c2e723eb679d9b9f7650b06bbb1ddd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f67a88bd-d378-4a8d-9854-7399ea7db3da
+      X-Runtime:
+      - '0.004125'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":0,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Wed, 26 Oct 2022 13:38:00 GMT
+recorded_with: VCR 6.0.0

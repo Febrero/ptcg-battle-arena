@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: realfevr-battle-arena-apis
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: arena-api.realfevr.com
+    http:
+      paths:
+      - backend:
+          serviceName: realfevr-battle-arena-apis
+          servicePort: 80

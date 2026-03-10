@@ -1,0 +1,88 @@
+shared:
+  internal_api_key: "battle-arena-dummy-key" # this is the token required by X-RealFevr-I-Token to comunicate internally with our service
+  realfevr_services: # this is the config with services and required to comunicate with other internal realfevr services
+    leaderboards:
+      service: "http://localhost:3005"
+      internal_api_key: "leaderboards-dummy-key"
+      external_api_key: "leaderboards-dummy-key"
+    rewards:
+      service: "http://localhost:3006"
+      internal_api_key: "rewards-dummy-key"
+    prizes:
+      service: "http://localhost:3007"
+      internal_api_key: "prizes-dummy-key"
+      external_api_key: "external_api_key_123"
+    user_profile:
+      service: "http://localhost:3004"
+      internal_api_key: "user-profile-dummy-key"
+    marketplace:
+      service: "http://localhost:3001"
+      internal_api_key: "nfts-dummy-key"
+      external_api_key: "nfts_123"
+    whitelists:
+      service: "http://localhost:3003"
+      internal_api_key: "whitelists-dummy-key"
+      external_api_key: "whitelists-dummy-key"
+    admin:
+      service: "http://localhost:3008"
+      internal_api_key: "admin-dummy-key"
+      external_api_key: "123"
+
+development:
+
+test:
+  realfevr_services:
+    marketplace:
+      external_api_key: "nfts_123"
+
+staging:
+  realfevr_services: # this is the config with services and required to comunicate with other internal realfevr services
+    leaderboards:
+      service: "http://realfevr-leaderboards-staging"
+    rewards:
+      service: "http://realfevr-rewards-staging"
+    prizes:
+      service: "http://realfevr-prizes-api-staging"
+      internal_api_key: "prizes-dummy-key"
+      external_api_key: "external_api_key_123"
+    user_profile:
+      service: "http://realfevr-user-profile-api-staging"
+    marketplace:
+      service: "http://realfevr-nfts-api-staging"
+      external_api_key: "nfts_123"
+    whitelists:
+      service: "http://realfevr-whitelists-staging"
+      internal_api_key: "white_list_123"
+      external_api_key: "white_list_123"
+    admin:
+      service: "http://realfevr-admin-staging"
+      external_api_key: "admin_123"
+production:
+  internal_api_key: "<%= Rails.application.credentials.internal_api_key %>"
+  external_api_key: "<%= Rails.application.credentials.external_api_key %>"
+  realfevr_services: # this is the config with services and required to comunicate with other internal realfevr services
+    leaderboards:
+      service: "http://realfevr-leaderboards"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :leaderboards, :internal_api_key)  %>"
+    rewards:
+      service: "http://realfevr-rewards"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :rewards, :internal_api_key)  %>"
+    prizes:
+      service: "http://realfevr-prizes-api"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :prizes, :internal_api_key)  %>"
+      external_api_key: "<%= Rails.application.credentials.dig(:internal_services, :prizes, :external_api_key)  %>"
+    user_profile:
+      service: "http://realfevr-user-profile-api"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :user_profile, :internal_api_key) %>"
+    marketplace:
+      service: "http://realfevr-nfts-api"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :marketplace, :internal_api_key) %>"
+      external_api_key: "<%= Rails.application.credentials.dig(:internal_services, :marketplace, :external_api_key) %>"
+    whitelists:
+      service: "http://realfevr-whitelists"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :whitelists, :internal_api_key) %>"
+      external_api_key: "<%= Rails.application.credentials.dig(:internal_services, :whitelists, :external_api_key) %>"
+    admin:
+      service: "http://realfevr-admin"
+      internal_api_key: "<%= Rails.application.credentials.dig(:internal_services, :admin, :internal_api_key) %>"
+      external_api_key: "<%= Rails.application.credentials.dig(:internal_services, :admin, :external_api_key) %>"

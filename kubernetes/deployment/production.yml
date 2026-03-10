@@ -1,0 +1,1178 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: realfevr-battle-arena-apis
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: realfevr-battle-arena-apis
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis
+  labels:
+    tags.datadoghq.com/env: production
+    tags.datadoghq.com/service: realfevr-battle-arena-apis
+    tags.datadoghq.com/version: $SEMAPHORE_GIT_TAG_NAME
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis
+        tags.datadoghq.com/env: production
+        tags.datadoghq.com/service: realfevr-battle-arena-apis
+        tags.datadoghq.com/version: $SEMAPHORE_GIT_TAG_NAME
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - ddprofrb
+            - exec
+            - puma
+            - '-C'
+            - config/puma.rb
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          resources:
+            limits:
+              memory: 2.5Gi
+            requests:
+              memory: 2Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+            - name: DD_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_ENV
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/env']
+            - name: DD_SERVICE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/service']
+            - name: DD_VERSION
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/version']
+            - name: DD_PROFILING_ENABLED
+              value: "true"
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis-jobs
+  labels:
+    tags.datadoghq.com/env: production
+    tags.datadoghq.com/service: realfevr-battle-arena-apis-jobs
+    tags.datadoghq.com/version: $SEMAPHORE_GIT_TAG_NAME
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis-jobs
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis-jobs
+        tags.datadoghq.com/env: production
+        tags.datadoghq.com/service: realfevr-battle-arena-apis-jobs
+        tags.datadoghq.com/version: $SEMAPHORE_GIT_TAG_NAME
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis-jobs
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - "/bin/bash"
+                  - "-l"
+                  - "-c"
+                  - "cd /usr/src/realfevr-battle-arena-apis/; for f in tmp/pids/sidekiq*.pid; do bundle exec sidekiqctl stop $f; done"
+          command:
+            - bundle
+            - exec
+            - ddprofrb
+            - exec
+            - sidekiq
+            - '-C'
+            - config/sidekiq.yml
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+            - name: DD_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_ENV
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/env']
+            - name: DD_SERVICE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/service']
+            - name: DD_VERSION
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['tags.datadoghq.com/version']
+            - name: DD_PROFILING_ENABLED
+              value: "true"
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-ticket-locker-and-distribution-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-ticket-locker-and-distribution-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-ticket-locker-and-distribution-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-ticket-locker-and-distribution-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::TicketLockerAndDistributionEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-ticket-factory-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-ticket-factory-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-ticket-factory-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-ticket-factory-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::TicketFactoryEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-marketplace-battle-arena-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-marketplace-battle-arena-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-v2-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-marketplace-v2-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-marketplace-v2-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-v2-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceV2EventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-marketplace-v3-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-marketplace-v3-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-marketplace-v3-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-marketplace-v3-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::MarketplaceV3EventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-opener-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-opener-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-opener-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-opener-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::OpenerEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-collection-id-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-collection-id-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-collection-id-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-collection-id-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::CollectionIdEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-erc721-bridge-base-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-erc721-bridge-base-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-erc721-bridge-base-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-erc721-bridge-base-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::Erc721BridgeBaseEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rabbitmq-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rabbitmq-consumer
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rabbitmq-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[GameEventConsumer]
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 10
+            periodSeconds: 300
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-apis-nfts-stats-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-apis-nfts-stats-consumer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-apis-nfts-stats-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis-nfts-stats-consumer
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - racecar
+            - Kafka::NftsStatsEventConsumer
+          resources:
+            limits:
+              memory: 0.6Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: SEMAPHORE_JOB_ID
+              value: $SEMAPHORE_JOB_ID
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          volumeMounts:
+            - name: kafka-cert
+              mountPath: "/etc/certs/kafka"
+              readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false # default setting; "mysecret" must exist
+            items:
+              - key: DO_kafka_ca.pem
+                path: DO_kafka_ca.pem
+              - key: DO_kafka.cert
+                path: DO_kafka.cert
+              - key: DO_kafka.key
+                path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-rewards-events-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-rewards-events-consumer
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-rewards-events-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[RewardsEventsConsumer]
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 10
+            periodSeconds: 300
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-prizes-events-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-prizes-events-consumer
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-prizes-events-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[PrizesEventsConsumer]
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 10
+            periodSeconds: 300
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfevr-battle-arena-rmq-marketplace-events-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfevr-battle-arena-rmq-marketplace-events-consumer
+  template:
+    metadata:
+      labels:
+        app: realfevr-battle-arena-rmq-marketplace-events-consumer
+    spec:
+      containers:
+        - name: realfevr-battle-arena-apis
+          image: 'index.docker.io/realfevr/realfevr-battle-arena-apis:$SEMAPHORE_GIT_TAG_NAME'
+          command:
+            - bundle
+            - exec
+            - rake
+            - rabbitmq:consumer:run[MarketplaceEventsConsumer]
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /ping?
+              port: 3000
+              httpHeaders:
+                - name: X-RF-CLIENT-PGAPI-AUTH-TOKEN
+                  value: c26aaa52a19935b7d6d6bdee0cd26365
+            initialDelaySeconds: 10
+            periodSeconds: 300
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              memory: 0.5Gi
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RAILS_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: realfevr-battle-arena-apis-secrets
+                  key: rails-master-key
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: kafka-cert
+            mountPath: "/etc/certs/kafka"
+            readOnly: true
+      volumes:
+        - name: kafka-cert
+          secret:
+            secretName: do-kafka-cert
+            optional: false
+            items:
+            - key: DO_kafka_ca.pem
+              path: DO_kafka_ca.pem
+            - key: DO_kafka.cert
+              path: DO_kafka.cert
+            - key: DO_kafka.key
+              path: DO_kafka.key
+      hostAliases:
+        - ip: 10.135.185.143
+          hostnames:
+            - mongodb1-prod
+            - redis1-prod
+        - ip: 10.135.185.146
+          hostnames:
+            - mongodb2-prod
+            - redis2-prod
+        - ip: 10.135.185.147
+          hostnames:
+            - mongodb3-prod
+            - redis3-prod
+      imagePullSecrets:
+        - name: docker-cre

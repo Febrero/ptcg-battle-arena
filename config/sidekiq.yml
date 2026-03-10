@@ -1,0 +1,18 @@
+:scheduler:
+  :dynamic: false
+development:
+  :concurrency: 1
+test:
+  :concurrency: 1
+staging:
+  :concurrency: 6
+production:
+  :concurrency: 6
+
+:queues:
+  - critical
+  - default
+  - events
+  - cron
+  - survival
+  - low

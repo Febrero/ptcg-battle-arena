@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0d7046e20b3e7b5ae261ddb3b5709b2f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 29c4578d-5aa4-45b1-bee0-424cf6fa4249
+      X-Runtime:
+      - '0.011367'
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Content-Length:
+      - '173'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"60ef0e2122464b08800cde89","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0007,"fixed_price_in_dollars":null,"update_token_price_in_sc":false,"image_url":null}}}'
+  recorded_at: Wed, 03 Apr 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0d7046e20b3e7b5ae261ddb3b5709b2f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e728763-e13e-4510-8b26-31325c4c5ea2
+      X-Runtime:
+      - '0.011718'
+      Vary:
+      - Accept, Accept-Encoding, Origin
+      Content-Length:
+      - '173'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"60ef0e2122464b08800cde89","type":"tokens","attributes":{"name":"FEVR","address":null,"price_in_dollars":0.0007,"fixed_price_in_dollars":null,"update_token_price_in_sc":false,"image_url":null}}}'
+  recorded_at: Wed, 03 Apr 2024 16:49:46 GMT
+recorded_with: VCR 6.0.0

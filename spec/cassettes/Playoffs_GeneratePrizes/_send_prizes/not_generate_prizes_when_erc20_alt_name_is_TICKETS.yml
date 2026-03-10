@@ -1,0 +1,1459 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 05c6b9f9-9cf1-4c03-a9bd-88764e0f8b34
+      X-Runtime:
+      - '0.025148'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":43780,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":43780,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43780,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43780,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43780,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43780,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43780,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43780,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43780,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43780,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43780,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43780,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43780,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43780,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43780,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43780,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43780,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43780,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43780,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43780,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43780,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43780,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43780,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43780,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43780,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43780,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43780,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43780,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43780,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43780,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43780,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43780,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43780,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43780,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43780,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43780,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43780,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43780,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43780,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43780,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43780,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43780,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43780,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43780,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43780,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43780,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43780,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43780,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43780,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43780,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43780,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43780,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43780,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43780,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43780,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43780,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43780,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43780,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43780,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43780,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43780,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43780,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43780,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43780,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43780,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43780,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43780,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":43780,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43780,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":43780,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43780,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43780,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43780,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43780,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43780,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43780,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43780,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43780,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43780,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43780,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43780,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43780,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43780,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43780,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43780,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43780,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43780,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43780,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43780,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43780,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43780,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43780,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43780,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43780,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43780,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43780,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43780,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43780,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43780,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43780,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43780,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43780,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43780,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43780,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43780,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43780,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43780,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43780,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43780,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43780,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43780,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43780,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43780,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43780,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43780,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43780,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43780,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43780,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43780,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43780,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43780,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43780,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43780,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43780,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43780,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43780,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43780,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43780,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43780,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43780,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43780,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43780,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43780,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43780,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - f34883e6-0e24-4e7d-9546-848db5ad6617
+      X-Runtime:
+      - '0.017993'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":43860,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":43860,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43860,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43860,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43860,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43860,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43860,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43860,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43860,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43860,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43860,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43860,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43860,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43860,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43860,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43860,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43860,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43860,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43860,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43860,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43860,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43860,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43860,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43860,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43860,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43860,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43860,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43860,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43860,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43860,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43860,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43860,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43860,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43860,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43860,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43860,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43860,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43860,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43860,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43860,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43860,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43860,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43860,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43860,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43860,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43860,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43860,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43860,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43860,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43860,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43860,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43860,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43860,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43860,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43860,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43860,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43860,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43860,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43860,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43860,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43860,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43860,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43860,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43860,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43860,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43860,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43860,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":43860,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43860,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":43860,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43860,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43860,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43860,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43860,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43860,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43860,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43860,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43860,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43860,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43860,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43860,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43860,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43860,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43860,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43860,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43860,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43860,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43860,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43860,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43860,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43860,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43860,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43860,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43860,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43860,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43860,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43860,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43860,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43860,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43860,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43860,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43860,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43860,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43860,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43860,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43860,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43860,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43860,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43860,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43860,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43860,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43860,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43860,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43860,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43860,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43860,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43860,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43860,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43860,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43860,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43860,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43860,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43860,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43860,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43860,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43860,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43860,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43860,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43860,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43860,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43860,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43860,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43860,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43860,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - ef9e6a03-5720-442b-9a83-a66fd9dbeb98
+      X-Runtime:
+      - '0.016226'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":43940,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":43940,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43940,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43940,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43940,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43940,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43940,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43940,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43940,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43940,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43940,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43940,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43940,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43940,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43940,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43940,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43940,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43940,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43940,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43940,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43940,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43940,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43940,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43940,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43940,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43940,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43940,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43940,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43940,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43940,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43940,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43940,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43940,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43940,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43940,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43940,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43940,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43940,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43940,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43940,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43940,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43940,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43940,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43940,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43940,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43940,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43940,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43940,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43940,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43940,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43940,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43940,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43940,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43940,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43940,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43940,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43940,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43940,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43940,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43940,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43940,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43940,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43940,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43940,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43940,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43940,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43940,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":43940,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":43940,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":43940,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":43940,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":43940,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":43940,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":43940,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":43940,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":43940,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":43940,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":43940,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":43940,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":43940,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":43940,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":43940,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":43940,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":43940,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":43940,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":43940,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":43940,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":43940,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":43940,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":43940,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":43940,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":43940,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":43940,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":43940,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":43940,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":43940,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":43940,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":43940,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43940,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":43940,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":43940,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":43940,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":43940,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":43940,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":43940,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":43940,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":43940,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":43940,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":43940,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43940,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":43940,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":43940,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":43940,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":43940,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":43940,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":43940,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":43940,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":43940,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":43940,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":43940,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":43940,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":43940,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":43940,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":43940,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":43940,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":43940,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":43940,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":43940,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":43940,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":43940,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":43940,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":43940,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":43940,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":43940,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - f6e686df-9864-4a01-9143-41b18cf18453
+      X-Runtime:
+      - '0.015081'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":44020,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":44020,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44020,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44020,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44020,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44020,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44020,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44020,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44020,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44020,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44020,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44020,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44020,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44020,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44020,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44020,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44020,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44020,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44020,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44020,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44020,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44020,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44020,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44020,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44020,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44020,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44020,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44020,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44020,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44020,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44020,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44020,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44020,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44020,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44020,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44020,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44020,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44020,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44020,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44020,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44020,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44020,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44020,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44020,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44020,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44020,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44020,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44020,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44020,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44020,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44020,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44020,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44020,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44020,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44020,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44020,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44020,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44020,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44020,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44020,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44020,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44020,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44020,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44020,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44020,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44020,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44020,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":44020,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44020,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":44020,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44020,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44020,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44020,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44020,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44020,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44020,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44020,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44020,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44020,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44020,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44020,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44020,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44020,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44020,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44020,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44020,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44020,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44020,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44020,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44020,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44020,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44020,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44020,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44020,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44020,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44020,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44020,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44020,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44020,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44020,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44020,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44020,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44020,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44020,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44020,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44020,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44020,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44020,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44020,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44020,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44020,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44020,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44020,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44020,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44020,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44020,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44020,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44020,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44020,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44020,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44020,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44020,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44020,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44020,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44020,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44020,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44020,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44020,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44020,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44020,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44020,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44020,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44020,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44020,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 567e1fa3-3357-46a5-b762-2389701a29e1
+      X-Runtime:
+      - '0.014715'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":44100,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":44100,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44100,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44100,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44100,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44100,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44100,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44100,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44100,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44100,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44100,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44100,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44100,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44100,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44100,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44100,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44100,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44100,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44100,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44100,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44100,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44100,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44100,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44100,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44100,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44100,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44100,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44100,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44100,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44100,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44100,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44100,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44100,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44100,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44100,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44100,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44100,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44100,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44100,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44100,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44100,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44100,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44100,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44100,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44100,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44100,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44100,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44100,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44100,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44100,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44100,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44100,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44100,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44100,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44100,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44100,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44100,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44100,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44100,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44100,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44100,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44100,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44100,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44100,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44100,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44100,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44100,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":44100,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44100,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":44100,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44100,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44100,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44100,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44100,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44100,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44100,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44100,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44100,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44100,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44100,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44100,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44100,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44100,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44100,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44100,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44100,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44100,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44100,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44100,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44100,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44100,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44100,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44100,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44100,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44100,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44100,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44100,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44100,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44100,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44100,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44100,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44100,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44100,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44100,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44100,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44100,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44100,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44100,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44100,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44100,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44100,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44100,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44100,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44100,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44100,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44100,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44100,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44100,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44100,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44100,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44100,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44100,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44100,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44100,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44100,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44100,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44100,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44100,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44100,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44100,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44100,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44100,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44100,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44100,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 667197be-4c16-488d-8bf4-0e628d517dd3
+      X-Runtime:
+      - '0.014649'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":44160,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":44160,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44160,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44160,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44160,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44160,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44160,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44160,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44160,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44160,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44160,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44160,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44160,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44160,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44160,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44160,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44160,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44160,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44160,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44160,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44160,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44160,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44160,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44160,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44160,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44160,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44160,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44160,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44160,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44160,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44160,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44160,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44160,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44160,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44160,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44160,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44160,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44160,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44160,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44160,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44160,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44160,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44160,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44160,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44160,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44160,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44160,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44160,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44160,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44160,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44160,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44160,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44160,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44160,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44160,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44160,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44160,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44160,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44160,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44160,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44160,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44160,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44160,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44160,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44160,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44160,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44160,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":44160,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44160,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":44160,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44160,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44160,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44160,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44160,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44160,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44160,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44160,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44160,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44160,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44160,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44160,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44160,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44160,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44160,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44160,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44160,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44160,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44160,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44160,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44160,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44160,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44160,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44160,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44160,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44160,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44160,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44160,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44160,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44160,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44160,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44160,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44160,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44160,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44160,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44160,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44160,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44160,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44160,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44160,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44160,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44160,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44160,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44160,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44160,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44160,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44160,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44160,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44160,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44160,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44160,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44160,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44160,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44160,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44160,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44160,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44160,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44160,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44160,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44160,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44160,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44160,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44160,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44160,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44160,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 9fa64f71-3c0a-4835-9725-7c5b0cb1f125
+      X-Runtime:
+      - '0.014648'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":44260,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":44260,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44260,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44260,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44260,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44260,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44260,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44260,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44260,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44260,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44260,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44260,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44260,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44260,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44260,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44260,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44260,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44260,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44260,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44260,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44260,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44260,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44260,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44260,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44260,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44260,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44260,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44260,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44260,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44260,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44260,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44260,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44260,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44260,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44260,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44260,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44260,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44260,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44260,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44260,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44260,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44260,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44260,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44260,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44260,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44260,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44260,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44260,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44260,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44260,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44260,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44260,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44260,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44260,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44260,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44260,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44260,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44260,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44260,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44260,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44260,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44260,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44260,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44260,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44260,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44260,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44260,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":44260,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44260,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":44260,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44260,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44260,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44260,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44260,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44260,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44260,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44260,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44260,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44260,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44260,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44260,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44260,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44260,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44260,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44260,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44260,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44260,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44260,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44260,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44260,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44260,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44260,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44260,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44260,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44260,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44260,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44260,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44260,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44260,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44260,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44260,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44260,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44260,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44260,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44260,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44260,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44260,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44260,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44260,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44260,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44260,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44260,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44260,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44260,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44260,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44260,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44260,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44260,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44260,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44260,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44260,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44260,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44260,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44260,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44260,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44260,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44260,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44260,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44260,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44260,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44260,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44260,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44260,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44260,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3001/tokens/FEVR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - nfts-dummy-key
+      X-Realfevr-E-Token:
+      - nfts_123
+      X-Realfevr-Token:
+      - nfts_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 8e2281fa-a50f-463f-8be0-1a6483fe7464
+      X-Runtime:
+      - '0.014304'
+      Vary:
+      - Origin
+      Content-Length:
+      - '16895'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#<Mongoid::Errors::DocumentNotFound:\"\\nmessage:\\n  Document
+        not found for class Token with attributes {:name=>\\\"FEVR\\\", :main_chain=>true}.\\nsummary:\\n  When
+        calling Token.find_by with a hash of attributes, all attributes provided must
+        match a document in the database or this error will be raised.\\nresolution:\\n  Search
+        for attributes that are in the database or set the Mongoid.raise_not_found_error
+        configuration option to false, which will cause a nil to be returned instead
+        of raising this error.\">","traces":{"Application Trace":[{"exception_object_id":44340,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"}],"Framework Trace":[{"exception_object_id":44340,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44340,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44340,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44340,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44340,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44340,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44340,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44340,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44340,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44340,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44340,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44340,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44340,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44340,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44340,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44340,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44340,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44340,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44340,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44340,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44340,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44340,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44340,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44340,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44340,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44340,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44340,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44340,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44340,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44340,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44340,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44340,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44340,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44340,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44340,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44340,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44340,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44340,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44340,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44340,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44340,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44340,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44340,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44340,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44340,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44340,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44340,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44340,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44340,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44340,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44340,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44340,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44340,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44340,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44340,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44340,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44340,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44340,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44340,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44340,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44340,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44340,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44340,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44340,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44340,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44340,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":44340,"id":0,"trace":"mongoid
+        (7.3.5) lib/mongoid/findable.rb:157:in `find_by''"},{"exception_object_id":44340,"id":1,"trace":"app/controllers/tokens_controller.rb:81:in
+        `set_token''"},{"exception_object_id":44340,"id":2,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:400:in `block in make_lambda''"},{"exception_object_id":44340,"id":3,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional''"},{"exception_object_id":44340,"id":4,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in
+        <module:Callbacks>''"},{"exception_object_id":44340,"id":5,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional''"},{"exception_object_id":44340,"id":6,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `block in invoke_before''"},{"exception_object_id":44340,"id":7,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `each''"},{"exception_object_id":44340,"id":8,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:595:in `invoke_before''"},{"exception_object_id":44340,"id":9,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks''"},{"exception_object_id":44340,"id":10,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:138:in `run_callbacks''"},{"exception_object_id":44340,"id":11,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/callbacks.rb:233:in `process_action''"},{"exception_object_id":44340,"id":12,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/rescue.rb:23:in `process_action''"},{"exception_object_id":44340,"id":13,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action''"},{"exception_object_id":44340,"id":14,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `block in instrument''"},{"exception_object_id":44340,"id":15,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument''"},{"exception_object_id":44340,"id":16,"trace":"activesupport
+        (7.0.8.1) lib/active_support/notifications.rb:206:in `instrument''"},{"exception_object_id":44340,"id":17,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action''"},{"exception_object_id":44340,"id":18,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action''"},{"exception_object_id":44340,"id":19,"trace":"mongoid
+        (7.3.5) lib/mongoid/railties/controller_runtime.rb:22:in `process_action''"},{"exception_object_id":44340,"id":20,"trace":"actionpack
+        (7.0.8.1) lib/abstract_controller/base.rb:151:in `process''"},{"exception_object_id":44340,"id":21,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:188:in `dispatch''"},{"exception_object_id":44340,"id":22,"trace":"actionpack
+        (7.0.8.1) lib/action_controller/metal.rb:251:in `dispatch''"},{"exception_object_id":44340,"id":23,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch''"},{"exception_object_id":44340,"id":24,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:32:in `serve''"},{"exception_object_id":44340,"id":25,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"exception_object_id":44340,"id":26,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `each''"},{"exception_object_id":44340,"id":27,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/journey/router.rb:32:in `serve''"},{"exception_object_id":44340,"id":28,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/routing/route_set.rb:852:in `call''"},{"exception_object_id":44340,"id":29,"trace":"apipie-rails
+        (1.3.0) lib/apipie/static_dispatcher.rb:74:in `call''"},{"exception_object_id":44340,"id":30,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44340,"id":31,"trace":"rack
+        (2.2.8.1) lib/rack/deflater.rb:44:in `call''"},{"exception_object_id":44340,"id":32,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:266:in `context''"},{"exception_object_id":44340,"id":33,"trace":"rack
+        (2.2.8.1) lib/rack/session/abstract/id.rb:260:in `call''"},{"exception_object_id":44340,"id":34,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/cookies.rb:704:in `call''"},{"exception_object_id":44340,"id":35,"trace":"rack
+        (2.2.8.1) lib/rack/etag.rb:27:in `call''"},{"exception_object_id":44340,"id":36,"trace":"rack
+        (2.2.8.1) lib/rack/conditional_get.rb:27:in `call''"},{"exception_object_id":44340,"id":37,"trace":"rack
+        (2.2.8.1) lib/rack/head.rb:12:in `call''"},{"exception_object_id":44340,"id":38,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call''"},{"exception_object_id":44340,"id":39,"trace":"activesupport
+        (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks''"},{"exception_object_id":44340,"id":40,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"exception_object_id":44340,"id":41,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44340,"id":42,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call''"},{"exception_object_id":44340,"id":43,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:34:in `call!''"},{"exception_object_id":44340,"id":44,"trace":"airbrake
+        (13.0.4) lib/airbrake/rack/middleware.rb:23:in `call''"},{"exception_object_id":44340,"id":45,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call''"},{"exception_object_id":44340,"id":46,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":44340,"id":47,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":44340,"id":48,"trace":"railties
+        (7.0.8.1) lib/rails/rack/logger.rb:27:in `call''"},{"exception_object_id":44340,"id":49,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":44340,"id":50,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":44340,"id":51,"trace":"rack
+        (2.2.8.1) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":44340,"id":52,"trace":"activesupport
+        (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":44340,"id":53,"trace":"actionpack (7.0.8.1)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":44340,"id":54,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":44340,"id":55,"trace":"rack
+        (2.2.8.1) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":44340,"id":56,"trace":"actionpack
+        (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call''"},{"exception_object_id":44340,"id":57,"trace":"rack-cors
+        (2.0.1) lib/rack/cors.rb:102:in `call''"},{"exception_object_id":44340,"id":58,"trace":"railties
+        (7.0.8.1) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":44340,"id":59,"trace":"prometheus-client
+        (4.2.2) lib/prometheus/middleware/exporter.rb:33:in `call''"},{"exception_object_id":44340,"id":60,"trace":"puma
+        (6.4.2) lib/puma/configuration.rb:272:in `call''"},{"exception_object_id":44340,"id":61,"trace":"puma
+        (6.4.2) lib/puma/request.rb:100:in `block in handle_request''"},{"exception_object_id":44340,"id":62,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown''"},{"exception_object_id":44340,"id":63,"trace":"puma
+        (6.4.2) lib/puma/request.rb:99:in `handle_request''"},{"exception_object_id":44340,"id":64,"trace":"puma
+        (6.4.2) lib/puma/server.rb:464:in `process_client''"},{"exception_object_id":44340,"id":65,"trace":"puma
+        (6.4.2) lib/puma/server.rb:245:in `block in run''"},{"exception_object_id":44340,"id":66,"trace":"puma
+        (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 28 Feb 2024 10:57:37 GMT
+recorded_with: VCR 6.0.0

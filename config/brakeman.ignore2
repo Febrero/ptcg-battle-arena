@@ -1,0 +1,29 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "f14bf8d3672b18333657ce0990e3138d0f586b2494a7348842ab65b45d8cc605",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "lib/base_search/filter.rb",
+      "line": 67,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "scope.where(:\"#{field}\" => value).in(:\"#{field}\" => (value.include?(\",\") ? (value.split(\",\")) : (value))).in(:\"#{field}\" => Regexp.new(Regexp.escape(value).tr(\",\", \"|\"), Regexp::IGNORECASE)).where(:\"#{field}\" => Regexp.new(Regexp.escape(value), Regexp::IGNORECASE)).where(:\"#{field.split(\"gte_\").last}\".gte => value).where(:\"#{field.split(\"lte_\").last}\".lte => value).where(:\"#{field}\" => ActiveModel::Type::Boolean.new.cast(value)).where(\"$#{field}\" => ({ \"$search\" => value, \"$caseSensitive\" => false, \"$diacriticSensitive\" => false }))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BaseSearch::Filter",
+        "method": "filter_search"
+      },
+      "user_input": "field",
+      "confidence": "Weak",
+      "cwe_id": [
+        89
+      ],
+      "note": ""
+    }
+  ],
+  "updated": "2023-09-25 16:03:19 +0200",
+  "brakeman_version": "5.4.0"
+}

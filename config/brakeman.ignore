@@ -1,0 +1,94 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Missing Encryption",
+      "warning_code": 109,
+      "fingerprint": "6a26086cd2400fbbfb831b2f8d7291e320bcc2b36984d2abc359e41b3b63212b",
+      "check_name": "ForceSSL",
+      "message": "The application does not force use of HTTPS: `config.force_ssl` is not enabled",
+      "file": "config/environments/production.rb",
+      "line": 1,
+      "link": "https://brakemanscanner.org/docs/warning_types/missing_encryption/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "cwe_id": [
+        311
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "b72bdb759d166adb8ada610599498b6c2430ed18652b3d73f9e7c8534eb51f1f",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "lib/base_search/filter.rb",
+      "line": 67,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "scope.where(:\"#{field}\" => value).in(:\"#{field}\" => value.to_s.split(\",\")).in(:\"#{field}\" => Regexp.new(Regexp.escape(value).tr(\",\", \"|\"), Regexp::IGNORECASE)).where(:\"#{field}\" => Regexp.new(Regexp.escape(value), Regexp::IGNORECASE)).where(:\"#{field.split(\"gte_\").last}\".gte => value).where(:\"#{field.split(\"lte_\").last}\".lte => value).where(:\"#{field}\" => ActiveModel::Type::Boolean.new.cast(value)).where(\"$#{field}\" => ({ \"$search\" => value, \"$caseSensitive\" => false, \"$diacriticSensitive\" => false }))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BaseSearch::Filter",
+        "method": "filter_search"
+      },
+      "user_input": "field",
+      "confidence": "Weak",
+      "cwe_id": [
+        89
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "eab6f0a1a6e4b7a40689ba5493d08fc99d589959e5a282cc2c6fd7d19212111a",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "lib/base_search/filter.rb",
+      "line": 71,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "scope.where(:\"#{field}\" => value).in(:\"#{field}\" => value.to_s.split(\",\")).in(:\"#{field}\" => (value.include?(\",\") ? (value.split(\",\").map(&:to_i)) : (value.to_i))).in(:\"#{field}\" => Regexp.new(Regexp.escape(value).tr(\",\", \"|\"), Regexp::IGNORECASE)).where(:\"#{field}\" => Regexp.new(Regexp.escape(value), Regexp::IGNORECASE)).where(:\"#{field.split(\"gte_\").last}\".gte => value).where(:\"#{field.split(\"lte_\").last}\".lte => value).where(:\"#{field}\" => ActiveModel::Type::Boolean.new.cast(value)).where(\"$#{field}\" => ({ \"$search\" => value, \"$caseSensitive\" => false, \"$diacriticSensitive\" => false }))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BaseSearch::Filter",
+        "method": "filter_search"
+      },
+      "user_input": "field",
+      "confidence": "Weak",
+      "cwe_id": [
+        89
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "f14bf8d3672b18333657ce0990e3138d0f586b2494a7348842ab65b45d8cc605",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "lib/base_search/filter.rb",
+      "line": 67,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "scope.where(:\"#{field}\" => value).in(:\"#{field}\" => (value.include?(\",\") ? (value.split(\",\")) : (value))).in(:\"#{field}\" => Regexp.new(Regexp.escape(value).tr(\",\", \"|\"), Regexp::IGNORECASE)).where(:\"#{field}\" => Regexp.new(Regexp.escape(value), Regexp::IGNORECASE)).where(:\"#{field.split(\"gte_\").last}\".gte => value).where(:\"#{field.split(\"lte_\").last}\".lte => value).where(:\"#{field}\" => ActiveModel::Type::Boolean.new.cast(value)).where(\"$#{field}\" => ({ \"$search\" => value, \"$caseSensitive\" => false, \"$diacriticSensitive\" => false }))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "BaseSearch::Filter",
+        "method": "filter_search"
+      },
+      "user_input": "field",
+      "confidence": "Weak",
+      "cwe_id": [
+        89
+      ],
+      "note": ""
+    }
+  ],
+  "updated": "2023-12-21 11:44:17 +0000",
+  "brakeman_version": "5.4.0"
+}

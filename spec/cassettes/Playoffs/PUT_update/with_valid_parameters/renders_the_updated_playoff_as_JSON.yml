@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3007/prizes?filter%5Bgame_mode_id%5D=1&filter%5Bpage%5D=1&filter%5Bper_page%5D=100&filter%5Bstate%5D=processed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - prizes-dummy-key
+      X-Realfevr-Token:
+      - external_api_key_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept,Accept-Encoding
+      Etag:
+      - W/"e0ce79ef594f2bc7c5668c7c1500da0d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1eb91a14-f441-4380-ae0d-cf24833b52a5
+      X-Runtime:
+      - '0.024900'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, render.active_model_serializers;dur=0.21,
+        process_action.action_controller;dur=19.81
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":1,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Mon, 22 Jan 2024 08:47:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3007/prizes?filter%5Bgame_mode_id%5D=1&filter%5Bpage%5D=1&filter%5Bper_page%5D=100&filter%5Bstate%5D=processed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-I-Token:
+      - prizes-dummy-key
+      X-Realfevr-Token:
+      - external_api_key_123
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept,Accept-Encoding
+      Etag:
+      - W/"e0ce79ef594f2bc7c5668c7c1500da0d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b2b2fa9-a880-4649-9127-9e2e1b404a58
+      X-Runtime:
+      - '0.007980'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.29, render.active_model_serializers;dur=0.28,
+        process_action.action_controller;dur=5.66
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[],"meta":{"current_page":1,"next_page":0,"prev_page":1,"total_pages":0,"total_count":0}}'
+  recorded_at: Mon, 22 Jan 2024 08:47:11 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3100/nfts/100.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      X-Realfevr-Token:
+      - '123'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"fe959f23a480688bd2bb8c404b4f9953"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5b2b07e0-8f01-4e44-8920-df94a84c105e
+      X-Runtime:
+      - '0.018945'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"60ef7e3911784f02daeb6e1b","uid":100,"wallet_addr":"0xcc4ce8a646e20d65cece2619c1497f78d3fd8818","video_id":5,"position":"Defender"}'
+  recorded_at: Thu, 27 Oct 2022 15:05:24 GMT
+recorded_with: VCR 6.0.0

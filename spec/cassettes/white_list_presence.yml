@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3200/white_lists/battle-arena/0x5a550FddA8619762D6cB792022F36f774F5fa2c1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Realfevr-Token:
+      - '12345'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Etag:
+      - W/"773a322821c1ecad80c8602fbf738670"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1473a888-c9eb-499b-a453-44bd7f3381be
+      X-Runtime:
+      - '0.064559'
+      Server-Timing:
+      - start_processing.action_controller;dur=2.68896484375, render.active_model_serializers;dur=0.80810546875,
+        process_action.action_controller;dur=49.27197265625
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"62346b642265615954b8fa7e","type":"wallets","attributes":{"address":"0x5a550FddA8619762D6cB792022F36f774F5fa2c1","roles":["admin"]}}}'
+  recorded_at: Tue, 22 Mar 2022 20:42:56 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,83 @@
+development: &development
+  cron_close_survival:
+    class: Survivals::CloseExpiredJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_open_survival:
+    class: Survivals::OpenSurvivalJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  close_streaks:
+    class: CloseStreaksJob
+    args: [2]
+    cron: "*/50 * * * *"
+    queue: "cron"
+  cron_open_playoff:
+    class: Playoffs::OpenPlayoffJob
+    cron: "*/1 * * * *"
+    queue: "cron"
+  cron_archive_playoffs:
+    class: Playoffs::ArchivePlayoffsJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_reset_assisted_gamers_daily_games:
+    class: AssistedGamers::ResetDailyGamesJob
+    cron: "0 0 * * *"
+    queue: "cron"
+
+test: *development
+
+staging: &default
+  cron_close_survival:
+    class: Survivals::CloseExpiredJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_open_survival:
+    class: Survivals::OpenSurvivalJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  close_streaks:
+    class: CloseStreaksJob
+    args: [2]
+    cron: "0 * * * *"
+    queue: "cron"
+  cron_open_playoff:
+    class: Playoffs::OpenPlayoffJob
+    cron: "*/1 * * * *"
+    queue: "cron"
+  cron_archive_playoffs:
+    class: Playoffs::ArchivePlayoffsJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_reset_assisted_gamers_daily_games:
+    class: AssistedGamers::ResetDailyGamesJob
+    cron: "0 0 * * *"
+    queue: "cron"
+
+production:
+  cron_close_survival:
+    class: Survivals::CloseExpiredJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_open_survival:
+    class: Survivals::OpenSurvivalJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  close_streaks:
+    class: CloseStreaksJob
+    args: [2]
+    cron: "0 * * * *"
+    queue: "cron"
+  cron_open_playoff:
+    class: Playoffs::OpenPlayoffJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_archive_playoffs:
+    class: Playoffs::ArchivePlayoffsJob
+    cron: "*/5 * * * *"
+    queue: "cron"
+  cron_reset_assisted_gamers_daily_games:
+    class: AssistedGamers::ResetDailyGamesJob
+    cron: "0 0 * * *"
+    queue: "cron"
+
