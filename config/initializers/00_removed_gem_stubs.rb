@@ -88,3 +88,20 @@ module RealfevrLibs
   class Engine < Rails::Engine
   end
 end
+
+# ── Callable concern (realfevr_libs gem removed) ─────────────────────────────
+# 15 service classes do `include Callable` to get a `MyService.call(...)` class
+# method that delegates to `new(...).call`. This is the standard service object
+# pattern. Recreated here so services load without the gem.
+module Callable
+  def self.included(base)
+    base.extend(ClassMethods)
+  end
+
+  module ClassMethods
+    # MyService.call(*args) → MyService.new(*args).call
+    def call(*args, &block)
+      new(*args, &block).call
+    end
+  end
+end
