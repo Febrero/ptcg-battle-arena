@@ -35,5 +35,6 @@ require "#{Rails.root}/lib/exceptions/playoffs/unrecognized_playoff_state_event.
 
 # blockchain/events_recoverer.rb removed — Web3/ETH not used in PTCG Battle Arena
 
+require "#{Rails.root}/lib/importers/csv/base.rb"
 require "#{Rails.root}/lib/importers/csv/grey_card_stats.rb"
 require "#{Rails.root}/lib/assisted_gamers_importer.rb"
