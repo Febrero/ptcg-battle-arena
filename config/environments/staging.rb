@@ -105,7 +105,7 @@ Rails.application.configure do
 
   config.nfts_external_api_key = "nfts_123"
 
-  config.mongodb_pw = Rails.application.credentials.mongodb_pw
+  config.mongodb_pw = ENV.fetch("MONGODB_PW", nil)
 
   config.auth_event_listener = "b319874dfd3446877be4203cd9be55af3c5b905dca98957de3dc089b5ac9061b6dccb07f78f92474c31ec1d55382ef96ef94b91c568d8f36517386e934568535"
 
@@ -161,8 +161,8 @@ Rails.application.configure do
     {contract_addr: "0x1ec814E3B4A15531fc8461568AcA7deFc05723Ba", role: "marketplace_v3", chain_id: 80001}
   ]
 
-  config.mandrill_username = Rails.application.credentials.mandrill[:username]
-  config.mandrill_password = Rails.application.credentials.mandrill[:password]
+  config.mandrill_username = ENV.fetch("MANDRILL_USERNAME", "")
+  config.mandrill_password = ENV.fetch("MANDRILL_PASSWORD", "")
   config.mandrill_mailer.default_url_options = {host: "staging.organya.world"}
 
   config.server_sockets_url = "ws://staging-arena-ws.realfevr.com:8080"

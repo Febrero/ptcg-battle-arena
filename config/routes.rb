@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekikas"
 
   namespace :v1 do
-    mount Auth::Engine => "/users"
-    mount RealfevrLibs::Engine => "/"
+    # mount Auth::Engine => "/users" — removed, Auth is now custom JWT module
+    # mount RealfevrLibs::Engine => "/" — removed gem
 
     resources :sample_decks, only: [:show], param: :stars
     resources :videos, only: [:index, :update], param: :nft_uid
@@ -198,8 +198,8 @@ Rails.application.routes.draw do
   end
 
   scope module: :v1 do
-    mount Auth::Engine => "/users"
-    mount RealfevrLibs::Engine => "/"
+    # mount Auth::Engine => "/users" — removed, Auth is now custom JWT module
+    # mount RealfevrLibs::Engine => "/" — removed gem
 
     resources :sample_decks, only: [:show], param: :stars
     resources :videos, only: [:index, :update], param: :nft_uid

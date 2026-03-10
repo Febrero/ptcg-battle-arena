@@ -6,11 +6,21 @@
 module KafkaIntegration
   class Consumer
     def self.inherited(subclass); end
+
+    # No-op: consumers declare which Kafka topic they subscribe to.
+    # Since we don't run Kafka, this is silently ignored at boot.
+    def self.subscribes_to(topic, **opts)
+      Rails.logger.debug("[KafkaIntegration] Stub: #{name} would subscribe to #{topic}") if defined?(Rails)
+    end
+
+    # No-op: consumer group id declaration
+    def self.group_id=(id); end
+    def self.group_id; nil; end
   end
 
   class Producer
     def self.deliver(payload, topic:, **opts)
-      Rails.logger.debug("[KafkaIntegration] Stub: would deliver to #{topic}")
+      Rails.logger.debug("[KafkaIntegration] Stub: would deliver to #{topic}") if defined?(Rails)
     end
   end
 end
@@ -33,8 +43,48 @@ module Eth
     def eth_get_logs(_params)
       { "result" => [] }
     end
+
+    def call(contract, func, *args)
+      nil
+    end
+  end
+
+  # Stub for Eth::Contract — used in blockchain_consolidation services (not active in PTCG)
+  class Contract
+    def self.from_abi(name:, address:, abi:)
+      new
+    end
+
+    def self.from_bin(name:, bin:, abi:)
+      new
+    end
+
+    def functions
+      []
+    end
+  end
+
+  # Stub for Eth::Address — used in blockchain_consolidation services (not active in PTCG)
+  class Address
+    attr_reader :address
+
+    def initialize(address)
+      @address = address.to_s
+    end
+
+    def to_s
+      @address
+    end
+
+    def checksummed
+      @address
+    end
   end
 end
 
-# ── ActiveResource (used only in app/models/nft.rb for NFT API calls) ────────
-# activeresource gem IS in Gemfile so this is fine — no stub needed.
+# ── RealfevrLibs Engine stub (routes.rb mounts RealfevrLibs::Engine) ─────────
+# Provides a no-op engine so the mount call doesn't crash at boot.
+module RealfevrLibs
+  class Engine < Rails::Engine
+  end
+end

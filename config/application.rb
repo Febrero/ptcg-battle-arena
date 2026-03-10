@@ -57,10 +57,10 @@ module RealfevrBattleArenaApis
     config.blacklisted_terms = YAML.load_file("#{Rails.application.root}/config/blacklisted_terms.yml").try(:[], "blacklisted") || []
 
     config.rabbitmq = {
-      hostname: Rails.application.credentials.dig(:rabbitmq, :hostname),
-      user: Rails.application.credentials.dig(:rabbitmq, :user),
-      vhost: Rails.application.credentials.dig(:rabbitmq, :vhost),
-      password: Rails.application.credentials.dig(:rabbitmq, :password)
+      hostname: ENV.fetch("RABBITMQ_HOSTNAME", nil),
+      user: ENV.fetch("RABBITMQ_USER", nil),
+      vhost: ENV.fetch("RABBITMQ_VHOST", nil),
+      password: ENV.fetch("RABBITMQ_PASSWORD", nil)
     }
 
     services_config = config_for(:services)
