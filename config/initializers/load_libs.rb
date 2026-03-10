@@ -1,3 +1,4 @@
+require "#{Rails.root}/lib/base_search.rb"
 require "#{Rails.root}/lib/activeresource_enhancements.rb"
 require "#{Rails.root}/lib/exceptions/leaderboard_source_not_available.rb"
 require "#{Rails.root}/lib/exceptions/request_not_found.rb"
